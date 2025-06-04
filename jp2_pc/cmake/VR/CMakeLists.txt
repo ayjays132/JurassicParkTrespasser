@@ -8,6 +8,12 @@ list(APPEND VR_Src
     ${CMAKE_SOURCE_DIR}/Source/Lib/VR/VR.cpp
 )
 
+if(ANDROID)
+    list(APPEND VR_Src
+        ${CMAKE_SOURCE_DIR}/Source/Lib/VR/android/VR_Android.cpp
+    )
+endif()
+
 include_directories(
     ${CMAKE_SOURCE_DIR}/Source
     ${CMAKE_SOURCE_DIR}/Source/gblinc
