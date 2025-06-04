@@ -13,11 +13,11 @@ set_target_properties(${PROJECT_NAME} PROPERTIES FOLDER Tests/Novel)
 include_directories(
     ${CMAKE_SOURCE_DIR}/Source
     ${CMAKE_SOURCE_DIR}/Source/gblinc
-    ${CMAKE_SOURCE_DIR}/gtest/googletest/include
 )
 
 target_link_libraries( ${PROJECT_NAME}
     Std
-    gtest
-    gtest_main
+    Catch2::Catch2WithMain
 )
+
+add_test(NAME ${PROJECT_NAME} COMMAND ${PROJECT_NAME})

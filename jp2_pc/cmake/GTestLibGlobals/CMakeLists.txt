@@ -13,4 +13,4 @@ add_common_options()
 
 add_library(${PROJECT_NAME} STATIC ${GTestLibGlobals_Src} )
 
-set_target_properties(${PROJECT_NAME} PROPERTIES FOLDER Tests/gtest)
+set_target_properties(${PROJECT_NAME} PROPERTIES FOLDER Tests/Catch2)

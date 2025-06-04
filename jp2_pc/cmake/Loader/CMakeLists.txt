@@ -1,30 +1,30 @@
 project(Loader)
 
 list(APPEND Loader_Inc
-    ${CMAKE_SOURCE_DIR}/source/Lib/Loader/ASyncLoader.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Loader/AsyncLoader.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/Loader/DataDaemon.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/Groff/EasyString.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Groff/EasyString.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/Loader/Fetchable.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/Groff/FileIO.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/Groff/Groff.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/Groff/GroffIO.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/Groff/GroffLoader.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/Loader/ImageLoader.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/Loader/Loader.hpp
-    ${CMAKE_SOURCE_DIR}/Source/lib/loader/loadtexture.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/Groff/ObjectHandle.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/Loader/PlatonicInstance.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/Loader/PVA.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/Loader/SaveFile.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/Sys/SmartBuffer.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/Groff/SymbolTable.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/Sys/Symtab.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/Sys/SysLog.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/Loader/TextureManager.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/Loader/TexturePackSurface.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/Groff/ValueTable.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/Loader/SaveBuffer.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/Groff/VTParse.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Groff/FileIO.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Groff/Groff.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Groff/GroffIO.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Groff/GroffLoader.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Loader/ImageLoader.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Loader/Loader.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Loader/LoadTexture.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Groff/ObjectHandle.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Loader/PlatonicInstance.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Loader/PVA.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Loader/SaveFile.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Sys/SmartBuffer.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Groff/SymbolTable.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Sys/Symtab.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Sys/SysLog.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Loader/TextureManager.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Loader/TexturePackSurface.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Groff/ValueTable.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Loader/SaveBuffer.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Groff/VTParse.hpp
 )
 
 list(APPEND Loader_Src

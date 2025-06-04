@@ -34,12 +34,12 @@ ${CMAKE_SOURCE_DIR}/Source/GUIApp/DialogVM.hpp
 ${CMAKE_SOURCE_DIR}/Source/GUIApp/DialogWater.hpp
 ${CMAKE_SOURCE_DIR}/Source/GUIApp/GDIBitmap.hpp
 ${CMAKE_SOURCE_DIR}/Source/GUIApp/GUIApp.h
-${CMAKE_SOURCE_DIR}/source/GUIApp/GUIAppDlg.h
+${CMAKE_SOURCE_DIR}/Source/GUIApp/GUIAppDlg.h
 ${CMAKE_SOURCE_DIR}/Source/GUIApp/GUIControls.hpp
-${CMAKE_SOURCE_DIR}/source/GUIApp/GUIPipeLine.hpp
+${CMAKE_SOURCE_DIR}/Source/GUIApp/GUIPipeLine.hpp
 ${CMAKE_SOURCE_DIR}/Source/GUIApp/GUITools.hpp
 ${CMAKE_SOURCE_DIR}/Source/GUIApp/LightProperties.hpp
-${CMAKE_SOURCE_DIR}/source/GUIApp/ParameterDlg.h
+${CMAKE_SOURCE_DIR}/Source/GUIApp/ParameterDlg.h
 ${CMAKE_SOURCE_DIR}/Source/GUIApp/PerspectiveSubdivideDialog.hpp
 ${CMAKE_SOURCE_DIR}/Source/GUIApp/QualityDialog.hpp
 ${CMAKE_SOURCE_DIR}/Source/GUIApp/SoundPropertiesDlg.hpp
@@ -47,7 +47,7 @@ ${CMAKE_SOURCE_DIR}/Source/GUIApp/StdAfx.h
 ${CMAKE_SOURCE_DIR}/Source/GUIApp/TerrainTest.hpp
 ${CMAKE_SOURCE_DIR}/Source/GUIApp/Toolbar.hpp
 ${CMAKE_SOURCE_DIR}/Source/GUIApp/resource.h
-${CMAKE_SOURCE_DIR}/Source/GUIApp/DialogScrollBars.hpp
+${CMAKE_SOURCE_DIR}/Source/GUIApp/DialogScrollbars.hpp
 )
 
 list(APPEND GUIApp_Src

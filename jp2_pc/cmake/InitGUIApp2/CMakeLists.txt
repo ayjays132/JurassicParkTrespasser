@@ -1,7 +1,7 @@
 project(InitGUIApp2)
 
 list(APPEND InitGUIApp2_Inc    
-    ${CMAKE_SOURCE_DIR}/Source/InitGUIApp2/resource.h
+    ${CMAKE_SOURCE_DIR}/Source/InitGUIApp2/Resource.h
     ${CMAKE_SOURCE_DIR}/Source/InitGUIApp2/StdAfx.h
     ${CMAKE_SOURCE_DIR}/Source/InitGUIApp2/InitGUIApp2.h
     ${CMAKE_SOURCE_DIR}/Source/InitGUIApp2/InitGUIApp2Dlg.h

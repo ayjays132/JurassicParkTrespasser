@@ -3,13 +3,13 @@ project(Game)
 list(APPEND Game_Inc
     ${CMAKE_SOURCE_DIR}/Source/Lib/Trigger/Action.hpp
     ${CMAKE_SOURCE_DIR}/Source/Game/DesignDaemon/BloodSplat.hpp
-    ${CMAKE_SOURCE_DIR}/source/Game/DesignDaemon/Daemon.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Game/DesignDaemon/Daemon.hpp
     ${CMAKE_SOURCE_DIR}/Source/Game/DesignDaemon/DaemonScript.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/Trigger/ExpressionEvaluate.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/Trigger/GameActions.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/GameLoop.hpp
-    ${CMAKE_SOURCE_DIR}/source/Game/DesignDaemon/Gun.hpp
-    ${CMAKE_SOURCE_DIR}/source/Game/DesignDaemon/HitSpang.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Game/DesignDaemon/Gun.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Game/DesignDaemon/HitSpang.hpp
     ${CMAKE_SOURCE_DIR}/Source/Game/DesignDaemon/Player.hpp
     ${CMAKE_SOURCE_DIR}/Source/Game/DesignDaemon/PlayerSettings.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/TextOverlay.hpp

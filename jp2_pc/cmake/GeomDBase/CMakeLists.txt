@@ -3,45 +3,45 @@ project(GeomDBase)
 list(APPEND GeomDBase_Inc
     ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/ClipMesh.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/Container.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/Renderer/GeomTypes.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Renderer/GeomTypes.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/Renderer/Primitives/IndexT.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/GeomDBase/Mesh.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/Mesh.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/MeshIterator.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/Renderer/Occlude.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/GeomDBase/Partition.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/GeomDBase/PartitionBuild.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/GeomDBase/PartitionPriv.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/GeomDBase/PartitionSpace.hpp
-    ${CMAKE_SOURCE_DIR}/source/GUIApp/PredefinedShapes.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/GeomDBase/RayCast.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/Renderer/RenderType.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/GeomDBase/Shape.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/GeomDBase/Skeleton.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Renderer/Occlude.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/Partition.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/PartitionBuild.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/PartitionPriv.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/PartitionSpace.hpp
+    ${CMAKE_SOURCE_DIR}/Source/GUIApp/PreDefinedShapes.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/RayCast.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Renderer/RenderType.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/Shape.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/Skeleton.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/SkeletonIterator.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/GeomDBase/Terrain.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/GeomDBase/TerrainLoad.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/GeomDBase/TerrainObj.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/GeomDBase/TerrainTexture.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/GeomDBase/TexturePageManager.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/GeomDBase/WaterQuadTree.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/GeomDBase/WaveletConv.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/GeomDBase/WaveletDataFormat.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/GeomDBase/WaveletQuadTree.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/GeomDBase/WaveletQuadTreeBase.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/GeomDBase/WaveletQuadTreeBaseRecalc.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/GeomDBase/WaveletQuadTreeBaseTri.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/GeomDBase/WaveletQuadTreeQuery.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/GeomDBase/WaveletQuadTreeTForm.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/GeomDBase/WaveletStaticData.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/GeomDBase/InvisibleShape.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/GeomDBase/LightShape.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/GeomDBase/LineSegment.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/GeomDBase/PartitionBuildBase.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/GeomDBase/PartitionPrivClass.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/GeomDBase/Plane.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/GeomDBase/PlaneAxis.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/GeomDBase/WaveletCoef.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/Renderer/GeomTypesPriv.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/Terrain.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/TerrainLoad.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/TerrainObj.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/TerrainTexture.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/TexturePageManager.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/WaterQuadTree.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/WaveletConv.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/WaveletDataFormat.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/WaveletQuadTree.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/WaveletQuadTreeBase.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/WaveletQuadTreeBaseRecalc.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/WaveletQuadTreeBaseTri.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/WaveletQuadTreeQuery.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/WaveletQuadTreeTForm.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/WaveletStaticData.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/InvisibleShape.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/LightShape.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/LineSegment.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/PartitionBuildBase.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/PartitionPrivClass.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/Plane.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/PlaneAxis.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/GeomDBase/WaveletCoef.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Renderer/GeomTypesPriv.hpp
 )
 
 list(APPEND GeomDBase_Src
