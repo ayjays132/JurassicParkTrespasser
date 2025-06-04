@@ -9,18 +9,22 @@ namespace VR {
 bool Initialize(const char* envCubemapFolder) {
     // Placeholder for Oculus Quest initialization
     std::printf("VR Initialize stub\n");
+
 #ifdef ENABLE_MODERN_ENV_RENDER
-    if(envCubemapFolder)
+    if (envCubemapFolder) {
         Renderer::InitializeEnvironment(envCubemapFolder);
-    else
+    } else {
         Renderer::InitializeEnvironment("assets/env");
+    }
 #endif
+
     return true;
 }
 
 void Shutdown() {
     // Placeholder cleanup
     std::printf("VR Shutdown stub\n");
+
 #ifdef ENABLE_MODERN_ENV_RENDER
     Renderer::ShutdownEnvironment();
 #endif

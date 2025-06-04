@@ -1,17 +1,22 @@
+#pragma once
+
 #include "EnvironmentModern.hpp"
 #include "../Transform/Vector.hpp"
 #include <cstdio>
 #include <vector>
 #include <string>
+
 #ifdef __ANDROID__
 #include <GLES3/gl3.h>
 #include <android/log.h>
 #else
 #include <GL/glew.h>
 #endif
+
 #include "../../../ThirdParty/stb/stb_image.h"
 
 namespace Renderer {
+
 namespace {
 GLuint gProgram = 0;
 GLuint gVAO = 0;
@@ -52,9 +57,10 @@ bool LoadCubemap(const char* folder){
     const char* names[6] = {"posx.png","negx.png","posy.png","negy.png","posz.png","negz.png"};
     glGenTextures(1, &gCubemap);
     glBindTexture(GL_TEXTURE_CUBE_MAP, gCubemap);
-    for(int i=0;i<6;i++){
-        std::string path = std::string(folder)+"/"+names[i];
-        int w,h,comp;
+
+    for(int i = 0; i < 6; i++){
+        std::string path = std::string(folder) + "/" + names[i];
+        int w, h, comp;
         unsigned char* data = stbi_load(path.c_str(), &w, &h, &comp, 4);
         if(!data){
 #ifdef __ANDROID__
@@ -64,28 +70,35 @@ bool LoadCubemap(const char* folder){
 #endif
             return false;
         }
-        glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X+i,0,GL_RGBA,w,h,0,GL_RGBA,GL_UNSIGNED_BYTE,data);
+        glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X + i, 0, GL_RGBA, w, h, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
         stbi_image_free(data);
     }
+
     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
+
     return true;
 }
 } // namespace
 
-bool InitializeEnvironment(const char* folder){
+bool InitializeEnvironment(const char* folder) {
 #ifdef __ANDROID__
-    __android_log_print(ANDROID_LOG_INFO, "Trespasser", "Modern environment init");
+    __android_log_print(ANDROID_LOG_INFO, "Trespasser", "Modern environment renderer init");
+#else
+    std::printf("Modern environment renderer init\n");
 #endif
+
     GLuint vs = Compile(GL_VERTEX_SHADER, vShader);
     GLuint fs = Compile(GL_FRAGMENT_SHADER, fShader);
+
     gProgram = glCreateProgram();
     glAttachShader(gProgram, vs);
     glAttachShader(gProgram, fs);
     glLinkProgram(gProgram);
+
     glDeleteShader(vs);
     glDeleteShader(fs);
 
@@ -104,28 +117,38 @@ bool InitializeEnvironment(const char* folder){
     glBindBuffer(GL_ARRAY_BUFFER, gVBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
     glEnableVertexAttribArray(0);
-    glVertexAttribPointer(0,3,GL_FLOAT,GL_FALSE,0,(void*)0);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
 
     return LoadCubemap(folder);
 }
 
-void ShutdownEnvironment(){
+void ShutdownEnvironment() {
     glDeleteBuffers(1, &gVBO);
     glDeleteVertexArrays(1, &gVAO);
     glDeleteProgram(gProgram);
     glDeleteTextures(1, &gCubemap);
     gVAO = gVBO = gProgram = gCubemap = 0;
+
+#ifdef __ANDROID__
+    __android_log_print(ANDROID_LOG_INFO, "Trespasser", "Modern environment renderer shutdown");
+#else
+    std::printf("Modern environment renderer shutdown\n");
+#endif
 }
 
-void RenderEnvironment(const float view[16], const float proj[16]){
+void RenderEnvironment(const float view[16], const float proj[16]) {
     glDepthFunc(GL_LEQUAL);
     glUseProgram(gProgram);
-    glUniformMatrix4fv(glGetUniformLocation(gProgram,"uView"),1,GL_FALSE,view);
-    glUniformMatrix4fv(glGetUniformLocation(gProgram,"uProj"),1,GL_FALSE,proj);
+
+    glUniformMatrix4fv(glGetUniformLocation(gProgram, "uView"), 1, GL_FALSE, view);
+    glUniformMatrix4fv(glGetUniformLocation(gProgram, "uProj"), 1, GL_FALSE, proj);
+
     glBindVertexArray(gVAO);
     glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_CUBE_MAP,gCubemap);
-    glDrawArrays(GL_TRIANGLES,0,36);
+    glBindTexture(GL_TEXTURE_CUBE_MAP, gCubemap);
+
+    glDrawArrays(GL_TRIANGLES, 0, 36);
+
     glDepthFunc(GL_LESS);
 }
 

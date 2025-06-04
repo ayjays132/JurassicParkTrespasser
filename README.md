@@ -62,3 +62,4 @@ physically based shading. It draws a cubemap skybox and is compatible with both
 desktop and Oculus Quest builds. Enable it with the
 `ENABLE_MODERN_ENV_RENDER` option and provide a folder containing six cubemap
 textures when initialising the VR system.
+

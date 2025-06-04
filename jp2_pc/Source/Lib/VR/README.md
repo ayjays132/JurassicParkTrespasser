@@ -10,3 +10,4 @@ To build for Android enable the `ENABLE_OCULUS_QUEST_SUPPORT` option and use an 
 The optional modern environment renderer (`ENABLE_MODERN_ENV_RENDER`) now loads
 a cubemap using OpenGL and draws it each frame. Pass the cubemap folder to
 `VR::Initialize()` when starting the application.
+
