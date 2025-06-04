@@ -28,6 +28,7 @@ list(APPEND Render3D_Inc
     ${CMAKE_SOURCE_DIR}/Source/Lib/Renderer/Line2D.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/Renderer/LineSide2DTest.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/Renderer/Overlay.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Renderer/EnvironmentModern.hpp
 )
 
 list(APPEND Render3D_Src
@@ -53,6 +54,7 @@ list(APPEND Render3D_Src
     ${CMAKE_SOURCE_DIR}/Source/Lib/Renderer/Shadow.cpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/Renderer/Sky.cpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/Renderer/Texture.cpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Renderer/EnvironmentModern.cpp
 )
 
 include_directories(
