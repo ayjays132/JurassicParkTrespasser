@@ -1,0 +1,4 @@
+#ifndef HEADER_BUILDVER_WRAPPER_HPP
+#define HEADER_BUILDVER_WRAPPER_HPP
+#include "GblInc/BuildVer.hpp"
+#endif // HEADER_BUILDVER_WRAPPER_HPP

@@ -22,5 +22,6 @@ include_directories(
 add_common_options()
 
 add_library(${PROJECT_NAME} STATIC ${VR_Inc} ${VR_Src})
+target_link_libraries(${PROJECT_NAME} PUBLIC Render3D)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES FOLDER Lib/Game)

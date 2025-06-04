@@ -1,0 +1,4 @@
+#ifndef HEADER_COMMON_WRAPPER_HPP
+#define HEADER_COMMON_WRAPPER_HPP
+#include "GblInc/common.hpp"
+#endif // HEADER_COMMON_WRAPPER_HPP
