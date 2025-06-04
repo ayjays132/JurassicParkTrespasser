@@ -1,7 +1,9 @@
 project(Render3D)
 
-find_package(OpenGL REQUIRED)
-find_package(GLEW REQUIRED)
+if(ENABLE_MODERN_ENV_RENDER)
+    find_package(OpenGL REQUIRED)
+    find_package(GLEW REQUIRED)
+endif()
 
 list(APPEND Render3D_Inc
     ${CMAKE_SOURCE_DIR}/Source/Lib/Renderer/Camera.hpp
@@ -57,8 +59,17 @@ list(APPEND Render3D_Src
     ${CMAKE_SOURCE_DIR}/Source/Lib/Renderer/Shadow.cpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/Renderer/Sky.cpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/Renderer/Texture.cpp
-    ${CMAKE_SOURCE_DIR}/Source/Lib/Renderer/EnvironmentModern.cpp
 )
+
+if(ENABLE_MODERN_ENV_RENDER)
+    list(APPEND Render3D_Src
+        ${CMAKE_SOURCE_DIR}/Source/Lib/Renderer/EnvironmentModern.cpp
+    )
+else()
+    list(APPEND Render3D_Src
+        ${CMAKE_SOURCE_DIR}/Source/Lib/Renderer/EnvironmentModernStub.cpp
+    )
+endif()
 
 include_directories(
     ${CMAKE_SOURCE_DIR}/Source
@@ -69,10 +80,12 @@ include_directories(
 add_common_options()
 
 add_library(${PROJECT_NAME} STATIC ${Render3D_Inc} ${Render3D_Src} )
-if(ANDROID)
-    target_link_libraries(${PROJECT_NAME} PUBLIC GLESv3)
-else()
-    target_link_libraries(${PROJECT_NAME} PUBLIC OpenGL::GL GLEW::GLEW)
+if(ENABLE_MODERN_ENV_RENDER)
+    if(ANDROID)
+        target_link_libraries(${PROJECT_NAME} PUBLIC GLESv3)
+    else()
+        target_link_libraries(${PROJECT_NAME} PUBLIC OpenGL::GL GLEW::GLEW)
+    endif()
 endif()
 
 set_target_properties(${PROJECT_NAME} PROPERTIES FOLDER Lib/Render)
