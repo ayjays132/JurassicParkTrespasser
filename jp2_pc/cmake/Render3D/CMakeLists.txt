@@ -1,13 +1,5 @@
 project(Render3D)
 
-if(ENABLE_MODERN_ENV_RENDER)
-    find_package(OpenGL QUIET)
-    find_package(GLEW QUIET)
-    if(NOT OpenGL_FOUND OR NOT GLEW_FOUND)
-        message(WARNING "OpenGL or GLEW not found; disabling modern environment rendering.")
-        set(ENABLE_MODERN_ENV_RENDER OFF)
-    endif()
-endif()
 
 list(APPEND Render3D_Inc
     ${CMAKE_SOURCE_DIR}/Source/Lib/Renderer/Camera.hpp
@@ -88,7 +80,7 @@ if(ENABLE_MODERN_ENV_RENDER)
     if(ANDROID)
         target_link_libraries(${PROJECT_NAME} PUBLIC GLESv3)
     else()
-        target_link_libraries(${PROJECT_NAME} PUBLIC OpenGL::GL GLEW::GLEW)
+        target_link_libraries(${PROJECT_NAME} PUBLIC OpenGL::GL)
     endif()
 endif()
 

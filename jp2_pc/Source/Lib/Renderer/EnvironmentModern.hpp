@@ -6,17 +6,22 @@
 #ifndef HEADER_LIB_RENDERER_ENVIRONMENT_MODERN_HPP
 #define HEADER_LIB_RENDERER_ENVIRONMENT_MODERN_HPP
 
+#ifdef ENABLE_OCULUS_QUEST_SUPPORT
+#include "stb_image.h"
+#include <GLES3/gl3.h>
+#include <android/log.h>
+
 namespace Renderer {
 
 /**
  * Initialize the modern environment renderer.
- * 
+ *
  * @param cubemapFolder A folder containing six cubemap images:
  *        posx.png, negx.png, posy.png, negy.png, posz.png, and negz.png.
  *        If not applicable (e.g., stub implementation), may be nullptr.
  * @return True if initialization was successful.
  */
-bool InitializeEnvironment(const char* cubemapFolder);
+bool InitializeEnvironment(const char *cubemapFolder);
 
 /**
  * Clean up any GL objects used for environment rendering.
@@ -25,7 +30,7 @@ void ShutdownEnvironment();
 
 /**
  * Render the environment cubemap.
- * 
+ *
  * @param view A 4x4 view matrix (column-major order).
  * @param proj A 4x4 projection matrix (column-major order).
  */
@@ -45,4 +50,5 @@ void SetEnvironmentRotation(const float rotation[16]);
 
 } // namespace Renderer
 
+#endif // ENABLE_OCULUS_QUEST_SUPPORT
 #endif // HEADER_LIB_RENDERER_ENVIRONMENT_MODERN_HPP
