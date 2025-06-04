@@ -63,3 +63,7 @@ desktop and Oculus Quest builds. Enable it with the
 `ENABLE_MODERN_ENV_RENDER` option and provide a folder containing six cubemap
 textures when initialising the VR system.
 
+The renderer exposes basic controls for VR integration. Use
+`Renderer::SetEnvironmentIntensity()` to adjust brightness and
+`Renderer::SetEnvironmentRotation()` to orient the cubemap dynamically.
+

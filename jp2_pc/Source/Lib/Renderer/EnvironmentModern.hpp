@@ -31,6 +31,18 @@ void ShutdownEnvironment();
  */
 void RenderEnvironment(const float view[16], const float proj[16]);
 
+/**
+ * Set the environment intensity. Values greater than 1.0 brighten the
+ * cubemap while values below 1.0 darken it.
+ */
+void SetEnvironmentIntensity(float intensity);
+
+/**
+ * Provide an additional rotation applied to the cubemap. The matrix should
+ * be a 4x4 column major rotation transform.
+ */
+void SetEnvironmentRotation(const float rotation[16]);
+
 } // namespace Renderer
 
 #endif // HEADER_LIB_RENDERER_ENVIRONMENT_MODERN_HPP

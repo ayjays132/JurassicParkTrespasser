@@ -22,16 +22,24 @@ GLuint gProgram = 0;
 GLuint gVAO = 0;
 GLuint gVBO = 0;
 GLuint gCubemap = 0;
+float gIntensity = 1.0f;
+float gRotation[16] = {
+    1,0,0,0,
+    0,1,0,0,
+    0,0,1,0,
+    0,0,0,1
+};
 
 const char *vShader = R"(
 #version 330 core
 layout(location=0) in vec3 aPos;
 uniform mat4 uView;
 uniform mat4 uProj;
+uniform mat4 uRot;
 out vec3 TexCoord;
 void main() {
-    TexCoord = aPos;
-    vec4 pos = uProj * uView * vec4(aPos, 1.0);
+    TexCoord = mat3(uRot) * aPos;
+    vec4 pos = uProj * uView * uRot * vec4(aPos, 1.0);
     gl_Position = pos.xyww;
 }
 )";
@@ -41,8 +49,9 @@ const char *fShader = R"(
 in vec3 TexCoord;
 out vec4 FragColor;
 uniform samplerCube uSkybox;
+uniform float uIntensity;
 void main() {
-    FragColor = texture(uSkybox, TexCoord);
+    FragColor = texture(uSkybox, TexCoord) * uIntensity;
 }
 )";
 
@@ -142,6 +151,8 @@ void RenderEnvironment(const float view[16], const float proj[16]) {
 
     glUniformMatrix4fv(glGetUniformLocation(gProgram, "uView"), 1, GL_FALSE, view);
     glUniformMatrix4fv(glGetUniformLocation(gProgram, "uProj"), 1, GL_FALSE, proj);
+    glUniformMatrix4fv(glGetUniformLocation(gProgram, "uRot"), 1, GL_FALSE, gRotation);
+    glUniform1f(glGetUniformLocation(gProgram, "uIntensity"), gIntensity);
 
     glBindVertexArray(gVAO);
     glActiveTexture(GL_TEXTURE0);
@@ -150,6 +161,16 @@ void RenderEnvironment(const float view[16], const float proj[16]) {
     glDrawArrays(GL_TRIANGLES, 0, 36);
 
     glDepthFunc(GL_LESS);
+}
+
+void SetEnvironmentIntensity(float intensity) {
+    gIntensity = intensity;
+}
+
+void SetEnvironmentRotation(const float rotation[16]) {
+    for(int i = 0; i < 16; ++i) {
+        gRotation[i] = rotation[i];
+    }
 }
 
 } // namespace Renderer

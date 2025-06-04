@@ -1,6 +1,7 @@
 #include "VR.hpp"
 #ifdef ENABLE_MODERN_ENV_RENDER
 #include "Lib/Renderer/EnvironmentModern.hpp"
+#include <cmath>
 #endif
 #include <cstdio>
 
@@ -16,6 +17,7 @@ bool Initialize(const char* envCubemapFolder) {
     } else {
         Renderer::InitializeEnvironment("assets/env");
     }
+    Renderer::SetEnvironmentIntensity(1.0f);
 #endif
 
     return true;
@@ -32,6 +34,19 @@ void Shutdown() {
 
 void BeginFrame() {
     // Placeholder per-frame begin
+#ifdef ENABLE_MODERN_ENV_RENDER
+    static float angle = 0.0f;
+    angle += 0.01f;
+    float c = std::cos(angle);
+    float s = std::sin(angle);
+    float rot[16] = {
+        c, 0, s, 0,
+        0, 1, 0, 0,
+       -s, 0, c, 0,
+        0, 0, 0, 1
+    };
+    Renderer::SetEnvironmentRotation(rot);
+#endif
 }
 
 void EndFrame() {
