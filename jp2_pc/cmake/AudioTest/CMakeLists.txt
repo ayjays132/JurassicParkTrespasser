@@ -5,7 +5,7 @@ list(APPEND AudioTest_Inc
     ${CMAKE_SOURCE_DIR}/Source/Test/AudioTestDoc.cpp
     ${CMAKE_SOURCE_DIR}/Source/Test/AudioTestView.cpp
     ${CMAKE_SOURCE_DIR}/Source/Test/MainFrm.cpp
-    ${CMAKE_SOURCE_DIR}/Source/Test/AttribDlg.cpp
+    ${CMAKE_SOURCE_DIR}/Source/Test/attribdlg.cpp
     ${CMAKE_SOURCE_DIR}/Source/Test/StdAfx.cpp
 )
 
@@ -15,7 +15,7 @@ list(APPEND AudioTest_Src
     ${CMAKE_SOURCE_DIR}/Source/Test/AudioTestView.h
     ${CMAKE_SOURCE_DIR}/Source/Test/MainFrm.h
     ${CMAKE_SOURCE_DIR}/Source/Test/resource_audio.h
-    ${CMAKE_SOURCE_DIR}/Source/Test/AttribDlg.h
+    ${CMAKE_SOURCE_DIR}/Source/Test/attribdlg.h
     ${CMAKE_SOURCE_DIR}/Source/Test/StdAfx.h
 )
 

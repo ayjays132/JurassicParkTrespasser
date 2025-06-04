@@ -8,11 +8,11 @@ list(APPEND trespass_Inc
 ${CMAKE_SOURCE_DIR}/Source/Trespass/video.h
 ${CMAKE_SOURCE_DIR}/Source/Trespass/Cdib.h
 ${CMAKE_SOURCE_DIR}/Source/Trespass/ctrls.h
-${CMAKE_SOURCE_DIR}/Source/trespass/DDDevice.hpp
+${CMAKE_SOURCE_DIR}/Source/Trespass/DDDevice.hpp
 ${CMAKE_SOURCE_DIR}/Source/Trespass/dialogs.h
-${CMAKE_SOURCE_DIR}/Source/trespass/keyremap.h
+${CMAKE_SOURCE_DIR}/Source/Trespass/keyremap.h
 ${CMAKE_SOURCE_DIR}/Source/Trespass/main.h
-${CMAKE_SOURCE_DIR}/Source/trespass/precomp.h
+${CMAKE_SOURCE_DIR}/Source/Trespass/precomp.h
 ${CMAKE_SOURCE_DIR}/Source/Trespass/rasterdc.hpp
 ${CMAKE_SOURCE_DIR}/Source/Trespass/supportfn.hpp
 ${CMAKE_SOURCE_DIR}/Source/Trespass/token.h
@@ -23,34 +23,34 @@ ${CMAKE_SOURCE_DIR}/Source/Trespass/resource.h
 )
 
 list(APPEND trespass_Src    
-${CMAKE_SOURCE_DIR}/Source/trespass/aaaa.cpp
-${CMAKE_SOURCE_DIR}/Source/trespass/Cdib.cpp
-${CMAKE_SOURCE_DIR}/Source/trespass/ctrls.cpp
-${CMAKE_SOURCE_DIR}/Source/trespass/DDDevice.cpp
-${CMAKE_SOURCE_DIR}/Source/trespass/Dialogs.cpp
-${CMAKE_SOURCE_DIR}/Source/trespass/dlgrender.cpp
-${CMAKE_SOURCE_DIR}/Source/trespass/gamewnd.cpp
-${CMAKE_SOURCE_DIR}/Source/trespass/keyremap.cpp
-${CMAKE_SOURCE_DIR}/Source/trespass/main.cpp
-${CMAKE_SOURCE_DIR}/Source/trespass/mainwnd.cpp
-${CMAKE_SOURCE_DIR}/Source/trespass/rasterdc.cpp
-${CMAKE_SOURCE_DIR}/Source/trespass/saveload.cpp
-${CMAKE_SOURCE_DIR}/Source/trespass/supportfn.cpp
-${CMAKE_SOURCE_DIR}/Source/trespass/token.cpp
-${CMAKE_SOURCE_DIR}/Source/trespass/tpassglobals.cpp
-${CMAKE_SOURCE_DIR}/Source/trespass/uidlgs.cpp
-${CMAKE_SOURCE_DIR}/Source/trespass/uiwnd.cpp
-${CMAKE_SOURCE_DIR}/Source/trespass/video.cpp
+${CMAKE_SOURCE_DIR}/Source/Trespass/aaaa.cpp
+${CMAKE_SOURCE_DIR}/Source/Trespass/Cdib.cpp
+${CMAKE_SOURCE_DIR}/Source/Trespass/ctrls.cpp
+${CMAKE_SOURCE_DIR}/Source/Trespass/DDDevice.cpp
+${CMAKE_SOURCE_DIR}/Source/Trespass/Dialogs.cpp
+${CMAKE_SOURCE_DIR}/Source/Trespass/dlgrender.cpp
+${CMAKE_SOURCE_DIR}/Source/Trespass/gamewnd.cpp
+${CMAKE_SOURCE_DIR}/Source/Trespass/keyremap.cpp
+${CMAKE_SOURCE_DIR}/Source/Trespass/main.cpp
+${CMAKE_SOURCE_DIR}/Source/Trespass/mainwnd.cpp
+${CMAKE_SOURCE_DIR}/Source/Trespass/rasterdc.cpp
+${CMAKE_SOURCE_DIR}/Source/Trespass/saveload.cpp
+${CMAKE_SOURCE_DIR}/Source/Trespass/supportfn.cpp
+${CMAKE_SOURCE_DIR}/Source/Trespass/token.cpp
+${CMAKE_SOURCE_DIR}/Source/Trespass/tpassglobals.cpp
+${CMAKE_SOURCE_DIR}/Source/Trespass/uidlgs.cpp
+${CMAKE_SOURCE_DIR}/Source/Trespass/uiwnd.cpp
+${CMAKE_SOURCE_DIR}/Source/Trespass/video.cpp
 )
 
 list(APPEND trespass_Rsc
-${CMAKE_SOURCE_DIR}/Source/trespass/res/icon_rap.ico
-${CMAKE_SOURCE_DIR}/Source/trespass/res/smallPal.bmp
-${CMAKE_SOURCE_DIR}/Source/trespass/res/USA_ctrls.rc2
+${CMAKE_SOURCE_DIR}/Source/Trespass/res/icon_rap.ico
+${CMAKE_SOURCE_DIR}/Source/Trespass/res/smallPal.bmp
+${CMAKE_SOURCE_DIR}/Source/Trespass/res/USA_ctrls.rc2
 ${CMAKE_SOURCE_DIR}/Source/Trespass/res/USA_hints.rc2
-${CMAKE_SOURCE_DIR}/Source/trespass/res/USA_keyremap.rc2
-${CMAKE_SOURCE_DIR}/Source/trespass/version.rc2
-${CMAKE_SOURCE_DIR}/Source/trespass/trespass.rc
+${CMAKE_SOURCE_DIR}/Source/Trespass/res/USA_keyremap.rc2
+${CMAKE_SOURCE_DIR}/Source/Trespass/version.rc2
+${CMAKE_SOURCE_DIR}/Source/Trespass/trespass.rc
 
 )
 
@@ -98,7 +98,7 @@ endif()
 
 target_link_options(${PROJECT_NAME} PUBLIC "/SAFESEH:NO") #Needed only for old Smacker lib, remove when it gets replaced
 
-target_precompile_headers(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/Source/trespass/precomp.h)
+target_precompile_headers(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/Source/Trespass/precomp.h)
 
 if (FOUND_TRESPASS_DIR AND USE_TRESPASSER_DIRECTORY)
     set_target_properties(${PROJECT_NAME} PROPERTIES VS_DEBUGGER_WORKING_DIRECTORY ${CMAKE_INSTALL_PREFIX})

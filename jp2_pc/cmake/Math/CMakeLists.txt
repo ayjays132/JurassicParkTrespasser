@@ -1,16 +1,16 @@
 project(Math)
 
 list(APPEND Math_Inc
-    ${CMAKE_SOURCE_DIR}/source/Lib/Math/FastInverse.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/Math/FastSqrt.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/Math/FastTrig.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Math/FastInverse.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Math/FastSqrt.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Math/FastTrig.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/Math/FloatDef.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/Math/FloatTable.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/Math/MathUtil.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/Transform/Matrix.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Transform/Matrix.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/Transform/Matrix2.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/Transform/Presence.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/Transform/Rotate.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Transform/Presence.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/Transform/Rotate.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/Transform/Scale.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/Transform/Shear.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/Transform/Transform.hpp
