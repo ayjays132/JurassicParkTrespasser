@@ -1,4 +1,7 @@
 #include "VR.hpp"
+#ifdef ENABLE_MODERN_ENV_RENDER
+#include "Lib/Renderer/EnvironmentModern.hpp"
+#endif
 #include <cstdio>
 
 namespace VR {
@@ -6,12 +9,18 @@ namespace VR {
 bool Initialize() {
     // Placeholder for Oculus Quest initialization
     std::printf("VR Initialize stub\n");
+#ifdef ENABLE_MODERN_ENV_RENDER
+    Renderer::InitializeEnvironment();
+#endif
     return true;
 }
 
 void Shutdown() {
     // Placeholder cleanup
     std::printf("VR Shutdown stub\n");
+#ifdef ENABLE_MODERN_ENV_RENDER
+    Renderer::ShutdownEnvironment();
+#endif
 }
 
 void BeginFrame() {
@@ -20,6 +29,9 @@ void BeginFrame() {
 
 void EndFrame() {
     // Placeholder per-frame end
+#ifdef ENABLE_MODERN_ENV_RENDER
+    Renderer::RenderEnvironment();
+#endif
 }
 
 } // namespace VR
