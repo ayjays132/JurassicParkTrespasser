@@ -2,7 +2,7 @@
 #include "Lib/Std/UDefs.hpp"
 #include "Lib/Std/Set.hpp"
 
-#include "gtest/gtest.h"
+#include <catch2/catch_test_macros.hpp>
 
 #include <type_traits>
 
@@ -15,7 +15,7 @@ enum TestEnum
 };
 
 //Check general prerequisites to make copy-assignment operator implementation work as expected
-TEST(CSetHelper, SafetyChecks)
+TEST_CASE("CSetHelper SafetyChecks", "[CSet]")
 {
 	using CSet_t = CSet<TestEnum>;
 	using CSetHC_t = CSet_t::CSetHelperConst;
@@ -30,24 +30,24 @@ TEST(CSetHelper, SafetyChecks)
 	static_assert(!std::is_polymorphic_v<CSetHC_t>);
 }
 
-TEST(CSetHelper, Copy_Assignment_Same_Bitfield)
+TEST_CASE("CSetHelper Copy_Assignment_Same_Bitfield", "[CSet]")
 {
 	CSet<TestEnum> bitfield = Set(TestEnum::Bar);
 
 	bitfield[TestEnum::Foo] = bitfield[TestEnum::Bar];
 	
-	EXPECT_TRUE(bitfield[TestEnum::Foo]);
+        CHECK(bitfield[TestEnum::Foo]);
 }
 
-TEST(CSetHelper, Copy_Assignment_Different_Bitfield)
+TEST_CASE("CSetHelper Copy_Assignment_Different_Bitfield", "[CSet]")
 {
 	CSet<TestEnum> first = Set(TestEnum::Start);
 	CSet<TestEnum> second = Set(TestEnum::Bar) + TestEnum::End;
 
 	first[TestEnum::Foo] = second[TestEnum::Bar];
 	
-	EXPECT_TRUE(first[TestEnum::Start]); //From init, not altered
-	EXPECT_TRUE(first[TestEnum::Foo]);   //Was assigned
-	EXPECT_FALSE(first[TestEnum::Bar]);  //Was not copied
-	EXPECT_FALSE(first[TestEnum::End]);  //Was not copied
+        CHECK(first[TestEnum::Start]);
+        CHECK(first[TestEnum::Foo]);
+        CHECK_FALSE(first[TestEnum::Bar]);
+        CHECK_FALSE(first[TestEnum::End]);
 }

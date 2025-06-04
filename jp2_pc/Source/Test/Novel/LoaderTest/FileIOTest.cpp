@@ -1,13 +1,13 @@
 #include "common.hpp"
 #include "Lib/Groff/FileIO.hpp"
 
-#include "gtest/gtest.h"
+#include <catch2/catch_test_macros.hpp>
 
-TEST(CFileIO, Destructor)
+TEST_CASE("CFileIO Destructor", "[CFileIO]")
 {
-	//Create several empty objects which are removed immediately
-	//This shall happen without errors
-	for (size_t i = 0; i < 5; i++) {
-		CFileIO object;
-	}
+        //Create several empty objects which are removed immediately
+        //This shall happen without errors
+        for (size_t i = 0; i < 5; i++) {
+                CFileIO object;
+        }
 }

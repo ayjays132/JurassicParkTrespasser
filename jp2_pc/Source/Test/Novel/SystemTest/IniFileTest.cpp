@@ -3,7 +3,7 @@
 #include <memory>
 #include <fstream>
 
-#include "gtest/gtest.h"
+#include <catch2/catch_test_macros.hpp>
 
 struct TestStruct
 {
@@ -13,18 +13,18 @@ struct TestStruct
 };
 
 
-TEST(IniFileCreate, CreateIfNotExists)
+TEST_CASE("IniFileCreate CreateIfNotExists", "[IniFile]")
 {
 	std::filesystem::path filename = "CreateIniFile.ini";
 	
 	std::filesystem::remove(filename);
-	ASSERT_FALSE(std::filesystem::exists(filename));
+        REQUIRE_FALSE(std::filesystem::exists(filename));
 	
 	IniFile file(filename.string(), "TestSection");
-	EXPECT_TRUE(std::filesystem::exists(filename));
+        CHECK(std::filesystem::exists(filename));
 }
 
-TEST(IniFileCreate, NoCreateIfExists)
+TEST_CASE("IniFileCreate NoCreateIfExists", "[IniFile]")
 {
 	std::filesystem::path filename = "NoCreateIniFile.ini";
 	std::string teststring = "FooFooBarBar";
@@ -33,48 +33,48 @@ TEST(IniFileCreate, NoCreateIfExists)
 		std::fstream write(filename, std::ios_base::out | std::ios_base::trunc);
 		write << teststring;
 	}
-	ASSERT_TRUE(std::filesystem::exists(filename));
+        REQUIRE(std::filesystem::exists(filename));
 
 	IniFile file(filename.string(), "TestSection");
-	EXPECT_TRUE(std::filesystem::exists(filename));
+        CHECK(std::filesystem::exists(filename));
 
 	{
 		//Ensure that file was not emptied
 		std::fstream read(filename, std::ios_base::in);
 		std::string instring;
 		read >> instring;
-		EXPECT_EQ(instring, teststring);
+                CHECK(instring == teststring);
 	}
 }
 
-class IniFileWriteTest : public ::testing::Test
+class IniFileWriteTest
 {
 protected:
-	virtual void SetUp() override
+       void SetUp()
 	{
 		inifile = std::make_unique<IniFile>("WriteTestIniFile.ini", "TestSection");
-		ASSERT_TRUE(inifile);
+                REQUIRE(inifile);
 	}
 	
 	void ExpectEmpty(const std::string& key)
 	{
 		char testbuffer[10] = { '\0' };
-		EXPECT_EQ(0, inifile->getString(key, testbuffer, sizeof(testbuffer), ""));
-		EXPECT_STREQ(testbuffer, "");
+                CHECK(inifile->getString(key, testbuffer, sizeof(testbuffer), "") == 0);
+                CHECK(std::string(testbuffer) == "");
 	}
 
 	std::unique_ptr<IniFile> inifile;
 };
 
-TEST_F(IniFileWriteTest, WriteInt)
+TEST_CASE_METHOD(IniFileWriteTest, "WriteInt", "[IniFile]")
 {
 	std::string key = "IntTest";
 	int value = 500;
 	inifile->setInt(key, value);
-	EXPECT_EQ(inifile->getInt(key, 0), value);
+        CHECK(inifile->getInt(key, 0) == value);
 }
 
-TEST_F(IniFileWriteTest, WriteString)
+TEST_CASE_METHOD(IniFileWriteTest, "WriteString", "[IniFile]")
 {
 	std::string key = "StringTest";
 	std::string source = "FooBar";
@@ -82,77 +82,77 @@ TEST_F(IniFileWriteTest, WriteString)
 	targetstring.reserve(20);
 	inifile->setString(key, source.c_str());
 	inifile->getString(key, targetstring.data(), 20, "");
-	EXPECT_EQ(source, source);
+        CHECK(source == source);
 }
 
-TEST_F(IniFileWriteTest, WriteStringNullptr)
+TEST_CASE_METHOD(IniFileWriteTest, "WriteStringNullptr", "[IniFile]")
 {
 	std::string key = "StringNullTest";
 	std::string targetstring;
 	targetstring.reserve(20);
 	inifile->setString(key, nullptr);
 	int read = inifile->getString(key, targetstring.data(), 20, "");
-	EXPECT_EQ(0, read);
-	EXPECT_TRUE(targetstring.empty());
+        CHECK(read == 0);
+        CHECK(targetstring.empty());
 }
 
-TEST_F(IniFileWriteTest, WriteStruct)
+TEST_CASE_METHOD(IniFileWriteTest, "WriteStruct", "[IniFile]")
 {
 	std::string key = "StructTest";
 	TestStruct originalStruct = { 15, 20, 25 };
 	TestStruct targetStruct = { 0, 0, 0 };
 
 	inifile->setBinary(key, &originalStruct, sizeof(originalStruct));
-	ASSERT_NE(0, inifile->getBinary(key, &targetStruct, sizeof(targetStruct)));
-	EXPECT_EQ(originalStruct.x, targetStruct.x);
-	EXPECT_EQ(originalStruct.y, targetStruct.y);
-	EXPECT_EQ(originalStruct.z, targetStruct.z);
+        REQUIRE(inifile->getBinary(key, &targetStruct, sizeof(targetStruct)) != 0);
+        CHECK(originalStruct.x == targetStruct.x);
+        CHECK(originalStruct.y == targetStruct.y);
+        CHECK(originalStruct.z == targetStruct.z);
 }
 
-TEST_F(IniFileWriteTest, WriteStructNullptr)
+TEST_CASE_METHOD(IniFileWriteTest, "WriteStructNullptr", "[IniFile]")
 {
 	std::string key = "StructNullptrTest";
 	TestStruct targetStruct = { 0, 0, 0 };
 
 	inifile->setBinary(key, nullptr, 0);
-	ASSERT_EQ(0, inifile->getBinary(key, &targetStruct, sizeof(targetStruct)));
+        REQUIRE(inifile->getBinary(key, &targetStruct, sizeof(targetStruct)) == 0);
 }
 
-TEST_F(IniFileWriteTest, DeleteInt)
+TEST_CASE_METHOD(IniFileWriteTest, "DeleteInt", "[IniFile]")
 {
 	std::string key = "TestInt";
 	inifile->setInt(key, 600);
 	inifile->deleteValue(key);
-	ExpectEmpty(key);
+        ExpectEmpty(key);
 }
 
-TEST_F(IniFileWriteTest, DeleteString)
+TEST_CASE_METHOD(IniFileWriteTest, "DeleteString", "[IniFile]")
 {
 	std::string key = "TestString";
 	inifile->setString(key, "FooBar");
 	inifile->deleteValue(key);
-	ExpectEmpty(key);
+        ExpectEmpty(key);
 }
 
-TEST_F(IniFileWriteTest, DeleteStruct)
+TEST_CASE_METHOD(IniFileWriteTest, "DeleteStruct", "[IniFile]")
 {
 	std::string key = "TestStruct";
 	TestStruct s = { 20, 21, 22 };
 	inifile->setBinary(key, &s, sizeof(s));
 	inifile->deleteValue(key);
-	ExpectEmpty(key);
+        ExpectEmpty(key);
 }
 
-class ReadIniFileTest : public ::testing::Test
+class ReadIniFileTest
 {
 protected:
-	virtual void SetUp() override
+       void SetUp()
 	{
 		filename = "ReadTestIniFile.ini";
 		makeTestIniFile();
-		ASSERT_TRUE(std::filesystem::exists(filename));
+                REQUIRE(std::filesystem::exists(filename));
 		inifile = std::make_unique<const IniFile>(filename, "TestSection");
-		ASSERT_TRUE(inifile);
+                REQUIRE(inifile);
 	}
 
 	void makeTestIniFile()
@@ -170,61 +170,61 @@ private:
 	std::string filename;
 };
 
-TEST_F(ReadIniFileTest, ReadIntValid)
+TEST_CASE_METHOD(ReadIniFileTest, "ReadIntValid", "[IniFile]")
 {
 	int read = inifile->getInt("TestInt", 0);
-	EXPECT_EQ(read, 500);
+        CHECK(read == 500);
 }
 
-TEST_F(ReadIniFileTest, ReadIntMissing)
+TEST_CASE_METHOD(ReadIniFileTest, "ReadIntMissing", "[IniFile]")
 {
 	int read = inifile->getInt("DoesNotExist", 600);
-	EXPECT_EQ(read, 600);
+        CHECK(read == 600);
 }
 
-TEST_F(ReadIniFileTest, ReadStringValid)
+TEST_CASE_METHOD(ReadIniFileTest, "ReadStringValid", "[IniFile]")
 {
 	char target[10] = { '\0' };
 	int read = inifile->getString("TestString", target, sizeof(target), "");
-	EXPECT_EQ(6, read);
-	ASSERT_EQ(target[9], '\0');
-	EXPECT_STREQ(target, "FooBar");
+        CHECK(read == 6);
+        REQUIRE(target[9] == '\0');
+        CHECK(std::string(target) == "FooBar");
 }
 
-TEST_F(ReadIniFileTest, ReadStringTargetTooShort)
+TEST_CASE_METHOD(ReadIniFileTest, "ReadStringTargetTooShort", "[IniFile]")
 {
 	char target[4] = { '\0' };
 	inifile->getString("TestString", target, sizeof(target), "");
-	ASSERT_EQ(target[3], '\0');
-	EXPECT_STREQ(target, "Foo");
+        REQUIRE(target[3] == '\0');
+        CHECK(std::string(target) == "Foo");
 }
 
-TEST_F(ReadIniFileTest, ReadStringTargetNullptr)
+TEST_CASE_METHOD(ReadIniFileTest, "ReadStringTargetNullptr", "[IniFile]")
 {
 	int read = inifile->getString("TestString", nullptr, 0, "");
-	EXPECT_EQ(read, 0);
+        CHECK(read == 0);
 }
 
-TEST_F(ReadIniFileTest, ReadStringMissing)
+TEST_CASE_METHOD(ReadIniFileTest, "ReadStringMissing", "[IniFile]")
 {
 	char target[10] = { '\0' };
 	inifile->getString("KeyMissing", target, sizeof(target), "Default");
-	ASSERT_EQ(target[9], '\0');
-	EXPECT_STREQ(target, "Default");
+        REQUIRE(target[9] == '\0');
+        CHECK(std::string(target) == "Default");
 }
 
-TEST_F(ReadIniFileTest, ReadStringDefaultNullptr)
+TEST_CASE_METHOD(ReadIniFileTest, "ReadStringDefaultNullptr", "[IniFile]")
 {
 	char target[10] = { '\0' };
 	inifile->getString("KeyMissing", target, sizeof(target), nullptr);
-	ASSERT_EQ(target[9], '\0');
-	EXPECT_STREQ(target, "");
+        REQUIRE(target[9] == '\0');
+        CHECK(std::string(target) == "");
 }
 
-TEST_F(ReadIniFileTest, ReadStringDefaultTooLong)
+TEST_CASE_METHOD(ReadIniFileTest, "ReadStringDefaultTooLong", "[IniFile]")
 {
 	char target[10] = { '\0' };
 	inifile->getString("KeyMissing", target, sizeof(target), "TooLongTargetString");
-	ASSERT_EQ(target[9], '\0');
-	EXPECT_STREQ(target, "TooLongTa");
+        REQUIRE(target[9] == '\0');
+        CHECK(std::string(target) == "TooLongTa");
 }

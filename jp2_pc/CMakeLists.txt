@@ -86,12 +86,14 @@ add_subdirectory(cmake/WaveTest)
 add_subdirectory(cmake/WinShell)
 
 
-option(INSTALL_GTEST OFF)
-add_subdirectory(gtest)
-set_target_properties(gtest PROPERTIES FOLDER "Tests/gtest")
-set_target_properties(gtest_main PROPERTIES FOLDER "Tests/gtest")
-set_target_properties(gmock PROPERTIES FOLDER "Tests/gtest")
-set_target_properties(gmock_main PROPERTIES FOLDER "Tests/gtest")
+include(FetchContent)
+FetchContent_Declare(
+    Catch2
+    GIT_REPOSITORY https://github.com/catchorg/Catch2.git
+    GIT_TAG v3.8.1
+)
+FetchContent_MakeAvailable(Catch2)
+set_target_properties(Catch2WithMain PROPERTIES FOLDER "Tests/Catch2")
 
 
 
