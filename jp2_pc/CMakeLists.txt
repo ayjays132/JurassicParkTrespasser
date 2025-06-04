@@ -31,6 +31,12 @@ set(CMAKE_CONFIGURATION_TYPES Debug Release Final CACHE STRING INTERNAL FORCE)
 
 include(cmake/CMakeCommon.cmake)
 
+# Optional Oculus Quest support
+option(ENABLE_OCULUS_QUEST_SUPPORT "Build with Oculus Quest VR support" OFF)
+if(ENABLE_OCULUS_QUEST_SUPPORT)
+    add_subdirectory(cmake/VR)
+endif()
+
 add_subdirectory(cmake/AI)
 add_subdirectory(cmake/AITest)
 add_subdirectory(cmake/Audio)
@@ -80,12 +86,14 @@ add_subdirectory(cmake/WaveTest)
 add_subdirectory(cmake/WinShell)
 
 
-option(INSTALL_GTEST OFF)
-add_subdirectory(gtest)
-set_target_properties(gtest PROPERTIES FOLDER "Tests/gtest")
-set_target_properties(gtest_main PROPERTIES FOLDER "Tests/gtest")
-set_target_properties(gmock PROPERTIES FOLDER "Tests/gtest")
-set_target_properties(gmock_main PROPERTIES FOLDER "Tests/gtest")
+include(FetchContent)
+FetchContent_Declare(
+    Catch2
+    GIT_REPOSITORY https://github.com/catchorg/Catch2.git
+    GIT_TAG v3.8.1
+)
+FetchContent_MakeAvailable(Catch2)
+set_target_properties(Catch2WithMain PROPERTIES FOLDER "Tests/Catch2")
 
 
 

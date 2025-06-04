@@ -2,7 +2,3 @@
 	path = jp2_pc/BuildTools/CMake
 	url = https://github.com/OpenTrespasser/CMake.git
 	branch = master
-[submodule "jp2_pc/gtest"]
-	path = jp2_pc/gtest
-	url = https://github.com/OpenTrespasser/googletest.git
-	branch = v1.10.x
