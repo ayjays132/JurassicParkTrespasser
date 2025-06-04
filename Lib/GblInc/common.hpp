@@ -70,7 +70,7 @@
 #define HEADER_GBLINC_COMMON_HPP
 
 #include "GblInc/Warnings.hpp"
-#include <new.h>
+#include <new>
 #include <stddef.h>
 
 #include "GblInc/BuildVer.hpp"

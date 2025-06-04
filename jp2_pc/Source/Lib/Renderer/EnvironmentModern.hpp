@@ -7,9 +7,10 @@
 #define HEADER_LIB_RENDERER_ENVIRONMENT_MODERN_HPP
 
 #ifdef ENABLE_OCULUS_QUEST_SUPPORT
-#include "stb_image.h"
 #include <GLES3/gl3.h>
 #include <android/log.h>
+#endif
+#include "stb_image.h"
 
 namespace Renderer {
 
