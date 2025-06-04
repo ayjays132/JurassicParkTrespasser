@@ -37,6 +37,11 @@ if(ENABLE_OCULUS_QUEST_SUPPORT)
     add_subdirectory(cmake/VR)
 endif()
 
+option(ENABLE_MODERN_ENV_RENDER "Use modern environment renderer" OFF)
+if(ENABLE_MODERN_ENV_RENDER)
+    add_definitions(-DENABLE_MODERN_ENV_RENDER)
+endif()
+
 add_subdirectory(cmake/AI)
 add_subdirectory(cmake/AITest)
 add_subdirectory(cmake/Audio)
