@@ -1,8 +1,12 @@
 project(Render3D)
 
 if(ENABLE_MODERN_ENV_RENDER)
-    find_package(OpenGL REQUIRED)
-    find_package(GLEW REQUIRED)
+    find_package(OpenGL QUIET)
+    find_package(GLEW QUIET)
+    if(NOT OpenGL_FOUND OR NOT GLEW_FOUND)
+        message(WARNING "OpenGL or GLEW not found; disabling modern environment rendering.")
+        set(ENABLE_MODERN_ENV_RENDER OFF)
+    endif()
 endif()
 
 list(APPEND Render3D_Inc
