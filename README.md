@@ -69,3 +69,28 @@ The renderer exposes basic controls for VR integration. Use
 `Renderer::SetEnvironmentIntensity()` to adjust brightness and
 `Renderer::SetEnvironmentRotation()` to orient the cubemap dynamically.
 
+## Android Build Setup
+
+The Android port uses the official Android NDK. Install version r21 or newer via
+Android Studio or from the [NDK downloads](https://developer.android.com/ndk/).
+After installation set the `ANDROID_NDK` environment variable to the NDK root
+before invoking CMake.
+
+Generate the Android project using the provided script:
+
+```bash
+cmake -S android -B build-android \
+  -DANDROID_NDK="$ANDROID_NDK" \
+  -DENABLE_OCULUS_QUEST_SUPPORT=ON \
+  -DENABLE_MODERN_ENV_RENDER=ON
+```
+
+Build the shared library with:
+
+```bash
+cmake --build build-android
+```
+
+The resulting `libjpt_android.so` can then be packaged into an APK along with
+the assets copied by CMake.
+

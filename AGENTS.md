@@ -38,3 +38,18 @@ Existing assets can be reused. The renderer exposes runtime controls via `Render
 2. Build the solution via Visual Studio or `cmake --build build`.
 3. Test the VR stub by launching `trespass.exe` from the Trespasser game directory.
 
+## Android NDK Setup
+
+The Android port relies on the official Android NDK. Install r21 or newer and
+set the `ANDROID_NDK` environment variable to the NDK path before running CMake.
+Generate an Android build with:
+
+```bash
+cmake -S android -B build-android \
+  -DANDROID_NDK="$ANDROID_NDK" \
+  -DENABLE_OCULUS_QUEST_SUPPORT=ON
+```
+
+Then build using `cmake --build build-android`. The resulting shared library can
+be packaged in an APK for deployment on Quest headsets.
+
