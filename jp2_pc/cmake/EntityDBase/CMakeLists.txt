@@ -1,17 +1,17 @@
 project(EntityDBase)
 
 list(APPEND EntityDBase_Inc
-    ${CMAKE_SOURCE_DIR}/source/Lib/EntityDBase/Animal.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/EntityDBase/Animate.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/EntityDBase/AnimationScript.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/Animal.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/Animate.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/AnimationScript.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/CameraPrime.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/EntityDBase/Entity.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/Entity.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/EntityLight.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/EntityDBase/FrameHeap.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/EntityDBase/Instance.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/EntityDBase/Message.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/EntityDBase/MessageLog.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/EntityDBase/MovementPrediction.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/FrameHeap.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/Instance.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/Message.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/MessageLog.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/MovementPrediction.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/MessageTypes/MsgAudio.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/MessageTypes/MsgCollision.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/MessageTypes/MsgControl.hpp
@@ -30,25 +30,25 @@ list(APPEND EntityDBase_Inc
     ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/Query/QPhysics.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/Query/QRenderer.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/Query/QSolidObject.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/EntityDBase/Query/QSubsystem.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/Query/QSubsystem.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/Query/QTerrain.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/Query/QTerrainObj.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/Query/QTriggers.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/QualitySettings.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/EntityDBase/Query.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/EntityDBase/QueueMessage.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/Query.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/QueueMessage.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/Query/QWater.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/MessageTypes/RegisteredMsg.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/EntityDBase/RenderDB.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/EntityDBase/Replay.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/EntityDBase/Teleport.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/EntityDBase/Water.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/EntityDBase/WorldDBase.hpp    
-    ${CMAKE_SOURCE_DIR}/source/Lib/EntityDBase/FilterIterator.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/EntityDBase/MessageTypes.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/EntityDBase/Instancer.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/EntityDBase/Subsystem.hpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/EntityDBase/WorldPriv.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/RenderDB.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/Replay.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/Teleport.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/Water.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/WorldDBase.hpp    
+    ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/FilterIterator.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/MessageTypes.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/Instancer.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/Subsystem.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/WorldPriv.hpp
 )
 
 list(APPEND EntityDBase_Src
@@ -70,7 +70,7 @@ list(APPEND EntityDBase_Src
     ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/QualitySettings.cpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/Query.cpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/QueueMessage.cpp
-    ${CMAKE_SOURCE_DIR}/source/Lib/EntityDBase/RenderDB.cpp
+    ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/RenderDB.cpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/Replay.cpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/Teleport.cpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/EntityDBase/Water.cpp

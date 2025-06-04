@@ -3,9 +3,9 @@ project(WinShell)
 list(APPEND WinShell_Inc
     ${CMAKE_SOURCE_DIR}/Source/Shell/AppEvent.hpp
     ${CMAKE_SOURCE_DIR}/Source/Shell/AppShell.hpp
-    ${CMAKE_SOURCE_DIR}/Source/Shell/WinShell.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Shell/winshell.hpp
     ${CMAKE_SOURCE_DIR}/Source/Shell/ShellResource.h
-    ${CMAKE_SOURCE_DIR}/Source/Shell/Resource.h
+    ${CMAKE_SOURCE_DIR}/Source/Shell/resource.h
     ${CMAKE_SOURCE_DIR}/Source/Shell/WinEvent.hpp
 )
 

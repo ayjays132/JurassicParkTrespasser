@@ -2,7 +2,7 @@ project(InitGUIApp)
 
 list(APPEND InitGUIApp_Inc    
     ${CMAKE_SOURCE_DIR}/Source/InitGUIApp/DDDevice.hpp
-    ${CMAKE_SOURCE_DIR}/Source/InitGUIApp/resource.h
+    ${CMAKE_SOURCE_DIR}/Source/InitGUIApp/Resource.h
     ${CMAKE_SOURCE_DIR}/Source/InitGUIApp/StdAfx.h
     ${CMAKE_SOURCE_DIR}/Source/InitGUIApp/InitGUIApp.h
     ${CMAKE_SOURCE_DIR}/Source/InitGUIApp/InitGUIAppDlg.h

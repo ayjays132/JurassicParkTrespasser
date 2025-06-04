@@ -4,7 +4,7 @@ list(APPEND GroffExp_Inc
     ${CMAKE_SOURCE_DIR}/Source/Tools/GroffExp/Bitmap.hpp
     ${CMAKE_SOURCE_DIR}/Source/Tools/GroffExp/Export.hpp
     ${CMAKE_SOURCE_DIR}/Source/Tools/GroffExp/Geometry.hpp
-    ${CMAKE_SOURCE_DIR}/source/Tools/GroffExp/GUIInterface.hpp
+    ${CMAKE_SOURCE_DIR}/Source/Tools/GroffExp/GUIInterface.hpp
     ${CMAKE_SOURCE_DIR}/Source/Tools/GroffExp/Mathematics.hpp
     ${CMAKE_SOURCE_DIR}/Source/Tools/GroffExp/ObjectDef.hpp
     ${CMAKE_SOURCE_DIR}/Source/Tools/GroffExp/GroffExp.h
