@@ -52,3 +52,6 @@ A git-based fork of the Jurassic Park: Trespasser source code.
 
 Sanglard, F. (2014). "Solution Overview" [list] & "Production Pipeline" [image].  
 Available at: http://fabiensanglard.net/trespasser [Accessed 17 Oct. 2018].
+
+## Oculus Quest Support
+A minimal VR stub can be enabled via `ENABLE_OCULUS_QUEST_SUPPORT` when configuring with CMake. This is the starting point for an Android/Quest port.

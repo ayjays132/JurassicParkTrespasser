@@ -1,5 +1,7 @@
 # VR Stub
 
-This directory contains initial placeholder code for Oculus Quest support. The
-implementation currently logs basic initialization and shutdown messages. It
-aims to serve as a starting point for a full VR port.
+This directory contains placeholder code for Oculus Quest support. The implementation logs initialization and shutdown messages.
+
+A basic Android-specific implementation is provided in `android/VR_Android.cpp`. It uses `android/log.h` to output messages when running on an Android-based headset such as the Oculus Quest.
+
+To build for Android enable the `ENABLE_OCULUS_QUEST_SUPPORT` option and use an Android toolchain with CMake. The library will compile the Android stub automatically when the `ANDROID` variable is set.
