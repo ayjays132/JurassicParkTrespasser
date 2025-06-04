@@ -17,6 +17,7 @@ endif()
 include_directories(
     ${CMAKE_SOURCE_DIR}/Source
     ${CMAKE_SOURCE_DIR}/Source/gblinc
+    ${CMAKE_SOURCE_DIR}/../Lib/GblInc
 )
 
 add_common_options()
