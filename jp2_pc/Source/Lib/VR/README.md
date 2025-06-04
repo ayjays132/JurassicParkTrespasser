@@ -6,7 +6,9 @@ A basic Android-specific implementation is provided in `android/VR_Android.cpp`.
 
 To build for Android enable the `ENABLE_OCULUS_QUEST_SUPPORT` option and use an Android toolchain with CMake. The library will compile the Android stub automatically when the `ANDROID` variable is set.
 
-
+The optional modern environment renderer (`ENABLE_MODERN_ENV_RENDER`) now loads
+a cubemap using OpenGL and draws it each frame. Pass the cubemap folder to
+`VR::Initialize()` when starting the application.
 ### Environment Renderer
 The optional modern environment renderer (`ENABLE_MODERN_ENV_RENDER`) enhances visual fidelity with a placeholder physically based pipeline. It integrates with the VR system when Oculus Quest support is enabled.
 

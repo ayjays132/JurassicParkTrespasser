@@ -1,5 +1,8 @@
 project(Render3D)
 
+find_package(OpenGL REQUIRED)
+find_package(GLEW REQUIRED)
+
 list(APPEND Render3D_Inc
     ${CMAKE_SOURCE_DIR}/Source/Lib/Renderer/Camera.hpp
     ${CMAKE_SOURCE_DIR}/Source/Lib/Renderer/Clip.hpp
@@ -60,10 +63,16 @@ list(APPEND Render3D_Src
 include_directories(
     ${CMAKE_SOURCE_DIR}/Source
     ${CMAKE_SOURCE_DIR}/Source/gblinc
+    ${CMAKE_SOURCE_DIR}/ThirdParty/stb
 )
 
 add_common_options()
 
 add_library(${PROJECT_NAME} STATIC ${Render3D_Inc} ${Render3D_Src} )
+if(ANDROID)
+    target_link_libraries(${PROJECT_NAME} PUBLIC GLESv3)
+else()
+    target_link_libraries(${PROJECT_NAME} PUBLIC OpenGL::GL GLEW::GLEW)
+endif()
 
 set_target_properties(${PROJECT_NAME} PROPERTIES FOLDER Lib/Render)

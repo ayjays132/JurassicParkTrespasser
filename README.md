@@ -56,9 +56,11 @@ Available at: http://fabiensanglard.net/trespasser [Accessed 17 Oct. 2018].
 ## Oculus Quest Support
 A minimal VR stub can be enabled via `ENABLE_OCULUS_QUEST_SUPPORT` when configuring with CMake. This is the starting point for an Android/Quest port.
 
-
-## Modern Environment Rendering
-An optional modern environment renderer provides physically based lighting and
+The project ships with a simple OpenGL based environment renderer supporting
+physically based shading. It draws a cubemap skybox and is compatible with both
+desktop and Oculus Quest builds. Enable it with the
+`ENABLE_MODERN_ENV_RENDER` option and provide a folder containing six cubemap
+textures when initialising the VR system.
 is designed to work on VR platforms such as the Oculus Quest. Enable it with
 `ENABLE_MODERN_ENV_RENDER` when generating the build files.
 

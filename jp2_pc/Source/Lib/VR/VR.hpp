@@ -6,7 +6,9 @@
 
 namespace VR {
 
-bool Initialize();
+// Provide the path to a cubemap folder when initialising so the modern
+// environment renderer can load the textures.
+bool Initialize(const char* envCubemapFolder = nullptr);
 void Shutdown();
 void BeginFrame();
 void EndFrame();

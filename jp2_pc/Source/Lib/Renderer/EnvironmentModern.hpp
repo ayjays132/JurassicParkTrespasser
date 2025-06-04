@@ -8,9 +8,21 @@
 
 namespace Renderer {
 
-bool InitializeEnvironment();
+/**
+ * Initialise the modern environment renderer. A folder containing six
+ * cubemap images is required. The images should be named
+ * posx.png, negx.png, posy.png, negy.png, posz.png and negz.png.
+ */
+bool InitializeEnvironment(const char* cubemapFolder);
+
+/** Clean up any GL objects used for environment rendering. */
 void ShutdownEnvironment();
-void RenderEnvironment();
+
+/**
+ * Render the environment cubemap. The view and projection matrices must
+ * be provided so that the skybox can be drawn correctly.
+ */
+void RenderEnvironment(const float view[16], const float proj[16]);
 
 } // namespace Renderer
 
