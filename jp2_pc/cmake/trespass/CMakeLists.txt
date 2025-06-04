@@ -92,6 +92,10 @@ target_link_libraries(${PROJECT_NAME}
     ${CMAKE_SOURCE_DIR}/lib/smacker/SMACKW32.LIB
 )
 
+if(ENABLE_OCULUS_QUEST_SUPPORT)
+    target_link_libraries(${PROJECT_NAME} VR)
+endif()
+
 target_link_options(${PROJECT_NAME} PUBLIC "/SAFESEH:NO") #Needed only for old Smacker lib, remove when it gets replaced
 
 target_precompile_headers(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/Source/trespass/precomp.h)

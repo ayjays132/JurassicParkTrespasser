@@ -31,6 +31,12 @@ set(CMAKE_CONFIGURATION_TYPES Debug Release Final CACHE STRING INTERNAL FORCE)
 
 include(cmake/CMakeCommon.cmake)
 
+# Optional Oculus Quest support
+option(ENABLE_OCULUS_QUEST_SUPPORT "Build with Oculus Quest VR support" OFF)
+if(ENABLE_OCULUS_QUEST_SUPPORT)
+    add_subdirectory(cmake/VR)
+endif()
+
 add_subdirectory(cmake/AI)
 add_subdirectory(cmake/AITest)
 add_subdirectory(cmake/Audio)
