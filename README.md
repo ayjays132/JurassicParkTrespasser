@@ -61,7 +61,9 @@ The project ships with a simple OpenGL based environment renderer supporting
 physically based shading. It draws a cubemap skybox and is compatible with both
 desktop and Oculus Quest builds. Enable it with the
 `ENABLE_MODERN_ENV_RENDER` option and provide a folder containing six cubemap
-textures when initialising the VR system.
+textures when initialising the VR system. If the OpenGL and GLEW development
+packages are not available, the build automatically falls back to a stub
+implementation so compilation can succeed without OpenGL.
 
 The renderer exposes basic controls for VR integration. Use
 `Renderer::SetEnvironmentIntensity()` to adjust brightness and
