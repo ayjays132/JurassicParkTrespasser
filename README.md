@@ -73,7 +73,16 @@ The renderer exposes basic controls for VR integration. Use
 Desktop builds optionally support modern game controllers via SDL2.
 Enable the feature with the `USE_SDL_CONTROLLER` CMake option. When
 enabled the System library links against SDL2 and `CInput` will query
-connected gamepads for movement and basic button actions.
+connected gamepads for movement and basic button actions. `VR::GetControllerInput`
+shares the same mappings so controllers behave consistently in VR.
+The default bindings are:
+
+- **A** &rarr; `Use`
+- **B** &rarr; `Stow`
+- **X** &rarr; `Grab`
+- **Y** &rarr; `Jump`
+- **Left Shoulder** &rarr; `Control`
+- **Right Shoulder** &rarr; `Shift`
 
 ## Building on Linux
 

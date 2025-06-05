@@ -20,6 +20,16 @@ to aid debugging when OpenGL is used.
 
 ### Controller Input
 `VR::GetControllerInput()` returns an `SInput` struct describing the state of any
-connected VR controllers. The current implementation is a stub which will return
-zeroed values when no VR controller integration is available.
+connected VR controllers. When built with `USE_SDL_CONTROLLER` enabled the stub
+also queries standard gamepads via SDL and maps buttons to common commands:
+
+- **A** &rarr; `uCMD_USE`
+- **B** &rarr; `uCMD_STOW`
+- **X** &rarr; `uCMD_GRAB`
+- **Y** &rarr; `uCMD_JUMP`
+- **Left Shoulder** &rarr; `uCMD_CONTROL`
+- **Right Shoulder** &rarr; `uCMD_SHIFT`
+
+If controller support is unavailable the function simply returns a zeroed
+structure.
 

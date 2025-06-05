@@ -93,14 +93,28 @@ SInput GetControllerInput() {
     SDL_GameController *ctrl = SDL_GameControllerOpen(i);
     if (!ctrl)
       continue;
+
     const Sint16 lx = SDL_GameControllerGetAxis(ctrl, SDL_CONTROLLER_AXIS_LEFTX);
     const Sint16 ly = SDL_GameControllerGetAxis(ctrl, SDL_CONTROLLER_AXIS_LEFTY);
     const Sint16 rx = SDL_GameControllerGetAxis(ctrl, SDL_CONTROLLER_AXIS_RIGHTX);
     const Sint16 ry = SDL_GameControllerGetAxis(ctrl, SDL_CONTROLLER_AXIS_RIGHTY);
+
     input.v2Move = CVector2<>(lx / 32767.0f, -ly / 32767.0f);
     input.v2Rotate = CVector2<>(rx / 32767.0f, -ry / 32767.0f);
+
     if (SDL_GameControllerGetButton(ctrl, SDL_CONTROLLER_BUTTON_A))
       input.u4ButtonState |= uCMD_USE;
+    if (SDL_GameControllerGetButton(ctrl, SDL_CONTROLLER_BUTTON_B))
+      input.u4ButtonState |= uCMD_STOW;
+    if (SDL_GameControllerGetButton(ctrl, SDL_CONTROLLER_BUTTON_X))
+      input.u4ButtonState |= uCMD_GRAB;
+    if (SDL_GameControllerGetButton(ctrl, SDL_CONTROLLER_BUTTON_Y))
+      input.u4ButtonState |= uCMD_JUMP;
+    if (SDL_GameControllerGetButton(ctrl, SDL_CONTROLLER_BUTTON_RIGHTSHOULDER))
+      input.u4ButtonState |= uCMD_SHIFT;
+    if (SDL_GameControllerGetButton(ctrl, SDL_CONTROLLER_BUTTON_LEFTSHOULDER))
+      input.u4ButtonState |= uCMD_CONTROL;
+
     SDL_GameControllerClose(ctrl);
     break;
   }
