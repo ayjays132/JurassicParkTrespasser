@@ -34,7 +34,7 @@ set(CMAKE_CONFIGURATION_TYPES Debug Release Final CACHE STRING INTERNAL FORCE)
 include(cmake/CMakeCommon.cmake)
 
 include_directories(
-    ${CMAKE_SOURCE_DIR}/../Lib/GblInc
+    ${CMAKE_SOURCE_DIR}/../Lib           # for GblInc headers
     ${CMAKE_SOURCE_DIR}/Source/gblinc
 )
 

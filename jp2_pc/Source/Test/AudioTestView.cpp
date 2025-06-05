@@ -11,7 +11,7 @@
 
 #include <yvals.h>
 
-#include "lib/audio/audio.hpp"
+#include "Lib/Audio/Audio.hpp"
 #include "Lib/Transform/Vector.hpp"
 
 #include "AudioTestDoc.h"

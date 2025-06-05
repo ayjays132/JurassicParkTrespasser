@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1997
+ * Copyright Â© DreamWorks Interactive. 1997
  *
  * Contents:
  *		Audio specific messages.
@@ -58,7 +58,7 @@
 #include "Lib/EntityDBase/Message.hpp"
 #include "Lib/EntityDBase/MessageTypes/RegisteredMsg.hpp"
 #include "Lib/EntityDBase/Entity.hpp"
-#include "lib/audio/SoundDefs.hpp"
+#include "Lib/Audio/SoundDefs.hpp"
 
 
 //*********************************************************************************************

@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1997
+ * Copyright Â© DreamWorks Interactive. 1997
  *
  * Contents:
  *	Sound definitions.
@@ -91,7 +91,7 @@
 #ifndef HEADER_LIB_AUDIO_DEFS_HPP
 #define HEADER_LIB_AUDIO_DEFS_HPP
 
-#include "Lib/std/utypes.hpp"
+#include "Lib/Std/UTypes.hpp"
 
 
 //**********************************************************************************************
