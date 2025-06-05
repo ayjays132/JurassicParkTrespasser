@@ -11,7 +11,7 @@
 
 namespace VR {
 
-bool Initialize(const char *envCubemapFolder) {
+bool Initialize(const char *envCubemapFolder, float envIntensity) {
   // Placeholder for Oculus Quest initialization
   std::printf("VR Initialize stub\n");
 
@@ -24,7 +24,7 @@ bool Initialize(const char *envCubemapFolder) {
   }
   if (!ok)
     std::fprintf(stderr, "Failed to initialise environment renderer\n");
-  Renderer::SetEnvironmentIntensity(1.0f);
+  Renderer::SetEnvironmentIntensity(envIntensity);
 #endif
 
   return true;
