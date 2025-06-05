@@ -16,11 +16,14 @@ bool Initialize(const char *envCubemapFolder) {
   std::printf("VR Initialize stub\n");
 
 #ifdef ENABLE_OCULUS_QUEST_SUPPORT
+  bool ok = false;
   if (envCubemapFolder) {
-    Renderer::InitializeEnvironment(envCubemapFolder);
+    ok = Renderer::InitializeEnvironment(envCubemapFolder);
   } else {
-    Renderer::InitializeEnvironment("assets/env");
+    ok = Renderer::InitializeEnvironment("assets/env");
   }
+  if (!ok)
+    std::fprintf(stderr, "Failed to initialise environment renderer\n");
   Renderer::SetEnvironmentIntensity(1.0f);
 #endif
 

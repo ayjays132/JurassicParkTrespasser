@@ -14,6 +14,8 @@ development libraries are not present the build instead compiles a stub and the
 environment will not be rendered. The environment intensity and orientation can
 be adjusted at runtime via `Renderer::SetEnvironmentIntensity()` and
 `Renderer::SetEnvironmentRotation()` whenever the renderer is available.
+Shader compilation and program linking errors are now reported to the console
+to aid debugging when OpenGL is used.
 
 ### Controller Input
 `VR::GetControllerInput()` returns an `SInput` struct describing the state of any

@@ -54,6 +54,20 @@ GLuint Compile(GLenum type, const char *src) {
   GLuint s = glCreateShader(type);
   glShaderSource(s, 1, &src, nullptr);
   glCompileShader(s);
+  GLint ok = 0;
+  glGetShaderiv(s, GL_COMPILE_STATUS, &ok);
+  if (!ok) {
+    char log[256];
+    glGetShaderInfoLog(s, sizeof(log), nullptr, log);
+#ifdef __ANDROID__
+    __android_log_print(ANDROID_LOG_ERROR, "Trespasser",
+                        "Shader compile error: %s", log);
+#else
+    std::fprintf(stderr, "Shader compile error: %s\n", log);
+#endif
+    glDeleteShader(s);
+    return 0;
+  }
   return s;
 }
 
@@ -100,12 +114,36 @@ bool InitializeEnvironment(const char *folder) {
 #endif
 
   GLuint vs = Compile(GL_VERTEX_SHADER, vShader);
+  if (!vs)
+    return false;
   GLuint fs = Compile(GL_FRAGMENT_SHADER, fShader);
+  if (!fs) {
+    glDeleteShader(vs);
+    return false;
+  }
 
   gProgram = glCreateProgram();
   glAttachShader(gProgram, vs);
   glAttachShader(gProgram, fs);
   glLinkProgram(gProgram);
+
+  GLint linked = 0;
+  glGetProgramiv(gProgram, GL_LINK_STATUS, &linked);
+  if (!linked) {
+    char log[256];
+    glGetProgramInfoLog(gProgram, sizeof(log), nullptr, log);
+#ifdef __ANDROID__
+    __android_log_print(ANDROID_LOG_ERROR, "Trespasser",
+                        "Program link error: %s", log);
+#else
+    std::fprintf(stderr, "Program link error: %s\n", log);
+#endif
+    glDeleteProgram(gProgram);
+    glDeleteShader(vs);
+    glDeleteShader(fs);
+    gProgram = 0;
+    return false;
+  }
 
   glDeleteShader(vs);
   glDeleteShader(fs);
