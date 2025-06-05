@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1997
+ * Copyright Â© DreamWorks Interactive. 1997
  *
  * Implementation of Trigger.hpp.
  *
@@ -57,7 +57,7 @@
 #include "Lib/Groff/ObjectHandle.hpp"
 #include "Lib/Loader/Loader.hpp"
 #include "Lib/Loader/SaveBuffer.hpp"
-#include "Lib/sys/DebugConsole.hpp"
+#include "Lib/Sys/DebugConsole.hpp"
 
 
 //*********************************************************************************************

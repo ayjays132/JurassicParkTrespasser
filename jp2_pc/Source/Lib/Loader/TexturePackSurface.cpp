@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1997
+ * Copyright Â© DreamWorks Interactive. 1997
  *
  * Implementation of texture packing.
  *
@@ -95,8 +95,8 @@
 #include "Common.hpp"
 #include "Lib/View/Raster.hpp"
 #include "TexturePackSurface.hpp"
-#include "Lib/sys/MemoryLog.hpp"
-#include "Lib/sys/DebugConsole.hpp"
+#include "Lib/Sys/MemoryLog.hpp"
+#include "Lib/Sys/DebugConsole.hpp"
 
 
 //*********************************************************************************************

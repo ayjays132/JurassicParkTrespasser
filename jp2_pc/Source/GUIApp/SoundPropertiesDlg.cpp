@@ -1,6 +1,6 @@
 /**********************************************************************************************
  *
- * Copyright © DreamWorks Interactive, 1996
+ * Copyright Â© DreamWorks Interactive, 1996
  *
  * Contents: Implementation of SoundPropertiesDlg.hpp
  *
@@ -73,8 +73,8 @@
 #include "Lib/Audio/Audio.hpp"
 #include "Lib/Audio/AudioDaemon.hpp"
 #include "Lib/Audio/Eax.h"
-#include "Lib/sys/reg.h"
-#include "Lib/sys/RegInit.hpp"
+#include "Lib/Sys/reg.h"
+#include "Lib/Sys/RegInit.hpp"
 
 
 

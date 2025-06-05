@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1997
+ * Copyright Â© DreamWorks Interactive. 1997
  *
  * Contents:
  *	Audio classes:
@@ -214,7 +214,7 @@
 #include "dsound.h"
 #include "Ia3d.h"
 #include "Lib/Sys/DebugConsole.hpp"
-#include "lib/sys/memorylog.hpp"
+#include "Lib/Sys/MemoryLog.hpp"
 #include <string>
 #include "AudioLoader.hpp"
 #include "Subtitle.hpp"

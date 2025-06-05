@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1997
+ * Copyright Â© DreamWorks Interactive. 1997
  *
  * Contents:
  *	CTrigger
@@ -59,7 +59,7 @@
 #include "Lib/EntityDBase/Entity.hpp"
 #include "Lib/Renderer/GeomTypes.hpp"
 #include "Lib/std/random.hpp"
-#include "Lib/sys/timer.hpp"
+#include "Lib/Sys/timer.hpp"
 #include "Lib/Groff/GroffIO.hpp"
 
 #include "Action.hpp"

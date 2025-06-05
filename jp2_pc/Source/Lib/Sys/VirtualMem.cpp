@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1997
+ * Copyright Â© DreamWorks Interactive. 1997
  *
  * Contents:
  *		Implementation of CVirtualMem (VirtualMem.hpp)
@@ -96,7 +96,7 @@
 #include "Lib/Std/MemLimits.hpp"
 #include "Lib/Sys/MemoryLog.hpp"
 #include "Lib/Sys/DebugConsole.hpp"
-#include "lib/sys/RegInit.hpp"
+#include "Lib/Sys/RegInit.hpp"
 #include "Lib/EntityDBase/WorldDBase.hpp"
 
 

@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1997
+ * Copyright Â© DreamWorks Interactive. 1997
  *
  * Contents:
  *		CSample 
@@ -123,7 +123,7 @@
 // DO NOT INCLUDE COMMON.HPP IN THIS FILE BECAUSE IT IS USED EXTERN TO THE GUIAPP (IN ALL THE
 // AUDIO TOOLS) AND I DO NOT WANT TO INCLUDE HALF OF THE PROJECT.
 #include "Audio.hpp"
-#include "lib/sys/memorylog.hpp"
+#include "Lib/Sys/MemoryLog.hpp"
 
 
 //**********************************************************************************************

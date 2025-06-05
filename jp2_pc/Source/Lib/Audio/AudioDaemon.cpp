@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1997
+ * Copyright Â© DreamWorks Interactive. 1997
  *
  * Contents:
  *	CAudioDaemon implementation
@@ -68,7 +68,7 @@
 #include "Lib/Loader/SaveFile.hpp"
 #include "Game/AI/AIMain.hpp"
 
-#include "lib/sys/memorylog.hpp"
+#include "Lib/Sys/MemoryLog.hpp"
 #include "Lib/Sys/FileEx.hpp"
 #include "Lib/Sys/Profile.hpp"
 

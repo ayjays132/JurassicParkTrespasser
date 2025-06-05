@@ -31,6 +31,18 @@ endif()
 
 set(CMAKE_CONFIGURATION_TYPES Debug Release Final CACHE STRING INTERNAL FORCE)
 
+# When cross compiling with mingw-w64, CMAKE_SYSTEM_NAME is "Windows" but
+# WIN32 may not be set.  Ensure WIN32 is defined so Windows-specific code
+# is enabled.
+if(NOT WIN32 AND CMAKE_SYSTEM_NAME STREQUAL "Windows")
+    set(WIN32 TRUE)
+endif()
+
+if(NOT WIN32 AND NOT CMAKE_SYSTEM_NAME STREQUAL "Windows")
+    message(FATAL_ERROR
+        "Non-Windows builds are unsupported. Use a mingw-w64 toolchain and set CMAKE_SYSTEM_NAME=Windows")
+endif()
+
 include(cmake/CMakeCommon.cmake)
 
 include_directories(

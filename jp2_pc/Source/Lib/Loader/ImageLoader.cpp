@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive, 1998.
+ * Copyright Â© DreamWorks Interactive, 1998.
  *
  * Contents:
  *		Implementation of ImageLoader.hpp
@@ -120,7 +120,7 @@
 #include "Lib/Sys/MemoryLog.hpp"
 #include "Lib/Sys/DebugConsole.hpp"
 #include "Lib/Sys/FileEx.hpp"
-#include "Lib/sys/Reg.h"
+#include "Lib/Sys/Reg.h"
 #include "Lib/EntityDBase/RenderDB.hpp"
 #include "Lib/EntityDBase/WorldDBase.hpp"
 #include "Lib/Sys/Profile.hpp"

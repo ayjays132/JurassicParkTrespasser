@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1997
+ * Copyright Â© DreamWorks Interactive. 1997
  *
  * Memory logging implementation
  *
@@ -105,7 +105,7 @@
 #include <string.h>
 #include "MemoryLog.hpp"
 #include "Lib/Sys/Profile.hpp"
-#include "Lib/sys/DebugConsole.hpp"
+#include "Lib/Sys/DebugConsole.hpp"
 #include "Lib/W95/WinInclude.hpp"
 #include "crtdbg.h"
 

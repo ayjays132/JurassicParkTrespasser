@@ -75,6 +75,24 @@ Enable the feature with the `USE_SDL_CONTROLLER` CMake option. When
 enabled the System library links against SDL2 and `CInput` will query
 connected gamepads for movement and basic button actions.
 
+## Building on Linux
+
+Trespasser is a Windows application. On Linux you can build a Windows
+executable using the mingw-w64 cross compiler. Install the cross
+toolchain and configure CMake with `CMAKE_SYSTEM_NAME` set to `Windows`
+and the mingw compilers:
+
+```bash
+cmake -S jp2_pc -B build \
+  -DCMAKE_SYSTEM_NAME=Windows \
+  -DCMAKE_C_COMPILER=x86_64-w64-mingw32-gcc \
+  -DCMAKE_CXX_COMPILER=x86_64-w64-mingw32-g++ \
+  -DCMAKE_RC_COMPILER=x86_64-w64-mingw32-windres
+cmake --build build
+```
+
+This produces the same Windows binaries as the Visual Studio build.
+
 ## Android Build Setup
 
 The Android port uses the official Android NDK. Install version r21 or newer via

@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1996
+ * Copyright Â© DreamWorks Interactive. 1996
  *
  * Implementation of Raster.hpp.
  *
@@ -100,7 +100,7 @@
 
 #include "Common.hpp"
 #include "Lib/W95/WinInclude.hpp"
-#include "Lib/sys/VirtualMem.hpp"
+#include "Lib/Sys/VirtualMem.hpp"
 #include "Raster.hpp"
 #include "Lib/Loader/TextureManager.hpp"
 #include "Lib/Loader/ImageLoader.hpp"
