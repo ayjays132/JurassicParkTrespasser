@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1996
+ * Copyright Â© DreamWorks Interactive. 1996
  *
  * Contents:
  *	Control classes.
@@ -115,6 +115,8 @@ const uint32 uBITKEY_WALK		= 0x02000000;
 const uint32 uBITKEY_BACKUP		= 0x04000000;
 const uint32 uBITKEY_LEFT		= 0x08000000;
 const uint32 uBITKEY_RIGHT		= 0x10000000;
+
+const float fSPRINT_MULTIPLIER = 1.5f;// Speed multiplier when holding Shift
 
 
 //*********************************************************************************************

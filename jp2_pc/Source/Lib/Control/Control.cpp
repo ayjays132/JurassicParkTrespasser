@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1996
+ * Copyright Â© DreamWorks Interactive. 1996
  *
  * Implementation of Control.hpp.
  *
@@ -567,8 +567,8 @@ SInput& CInput::tinReadDefaultControls()
 		tin_Input.v2Move.tX = 0.6f;
 	}
 
-//	if (tin_Input.u4ButtonState & uCMD_SHIFT)
-//		tin_Input.v2Move *= 1.5f;
+        if (tin_Input.u4ButtonState & uCMD_SHIFT)
+                tin_Input.v2Move *= fSPRINT_MULTIPLIER;
 
 /*	float f_wasted;
 	CVector2<> v2_rotate;
