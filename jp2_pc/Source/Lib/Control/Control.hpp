@@ -86,8 +86,9 @@ typedef void* myHANDLE;
 enum EControlMethod
 // prefix: ecm
 {
-	ecm_DefaultControls,
-	ecm_Joystick
+        ecm_DefaultControls,
+        ecm_Joystick,
+        ecm_GameController
 };
 
 
@@ -181,8 +182,9 @@ public:
 
 	// functions to return the controls in the standard form of a Tinput struct
 	// these functions may use win32 or DirectInput to do their work.
-	SInput& tinReadDefaultControls();
-	SInput& tinReadStandardJoystickControls();
+        SInput& tinReadDefaultControls();
+        SInput& tinReadStandardJoystickControls();
+        SInput& tinReadGameController();
 
 private:
 

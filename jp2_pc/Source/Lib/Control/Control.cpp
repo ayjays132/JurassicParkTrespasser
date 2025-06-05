@@ -149,16 +149,20 @@ void CInputDeemone::Process(const CMessageStep& msg_step)
 		SInput tin;
 
 		// which control method are we using.....
-		switch (ecm_Control)
-		{
-		case ecm_DefaultControls:
-			tin=inp_Input.tinReadDefaultControls();
-			break;
+                switch (ecm_Control)
+                {
+                case ecm_DefaultControls:
+                        tin=inp_Input.tinReadDefaultControls();
+                        break;
 
-		case ecm_Joystick:
-			tin=inp_Input.tinReadStandardJoystickControls();
-			break;
-		}
+                case ecm_Joystick:
+                        tin=inp_Input.tinReadStandardJoystickControls();
+                        break;
+
+                case ecm_GameController:
+                        tin=inp_Input.tinReadGameController();
+                        break;
+                }
 
 		tin.fElapsedTime = msg_step.sStep;
 
@@ -871,8 +875,28 @@ bool bReadJoystickSimple(float& rf_x, float& rf_y, float& rf_z, bool& rb_trigger
 	rf_y -= 1.0f;
 	rf_z -= 1.0f;
 	rb_trigger = ji.dwButtons & 1;
-	rb_thumb   = ji.dwButtons & 2;
+        rb_thumb   = ji.dwButtons & 2;
 
-	return true;
+        return true;
+}
+
+//******************************************************************************
+//
+// Placeholder for modern controller input using SDL or platform APIs.
+// Always returns no input when controller support is unavailable.
+//
+SInput& CInput::tinReadGameController()
+{
+        // Clear all control values.
+        tin_Input.u4ButtonState = 0;
+        tin_Input.u4ButtonHit = 0;
+        tin_Input.v2Move = CVector2<>(0.0f, 0.0f);
+        tin_Input.v2Rotate = CVector2<>(0.0f, 0.0f);
+
+#ifdef USE_SDL_CONTROLLER
+        // SDL2 controller query would go here
+#endif
+
+        return tin_Input;
 }
 
