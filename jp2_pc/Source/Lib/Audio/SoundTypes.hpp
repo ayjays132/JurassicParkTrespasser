@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1997
+ * Copyright Â© DreamWorks Interactive. 1997
  *
  * Contents:
  *	Standard header file for sound library, this is required so that the audio library
@@ -34,8 +34,12 @@
 #ifndef _H_SOUNDTYPESHEADER
 #define _H_SOUNDTYPESHEADER
 
-#include "windows.h"
-#include "crtdbg.h"
+#ifdef _WIN32
+#include <windows.h>
+#endif
+#ifdef _WIN32
+#include <crtdbg.h>
+#endif
 #include "Lib/Std/UTypes.hpp"
 #include "Lib/Std/UAssert.hpp"
 

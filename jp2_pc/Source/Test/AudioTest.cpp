@@ -8,7 +8,7 @@
 
 #include <yvals.h>
 
-#include "lib/audio/audio.hpp"
+#include "Lib/Audio/Audio.hpp"
 
 #include "MainFrm.h"
 #include "AudioTestDoc.h"

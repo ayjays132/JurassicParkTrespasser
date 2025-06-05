@@ -69,11 +69,11 @@
 #ifndef HEADER_GBLINC_COMMON_HPP
 #define HEADER_GBLINC_COMMON_HPP
 
-#include "GblInc/Warnings.hpp"
+#include "gblinc/Warnings.hpp"
 #include <new>
 #include <stddef.h>
 
-#include "GblInc/BuildVer.hpp"
+#include "gblinc/BuildVer.hpp"
 
 #include "Lib/Std/Array.hpp"
 #include "Lib/Std/InitSys.hpp"
