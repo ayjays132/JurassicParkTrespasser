@@ -14,7 +14,11 @@ namespace VR {
 
 // Provide the path to a cubemap folder when initialising so the modern
 // environment renderer can load the textures.
-    bool Initialize(const char *envCubemapFolder = nullptr);
+    // Optionally specify an initial cubemap folder and brightness when
+    // initialising the VR system. The intensity parameter is passed directly
+    // to the modern environment renderer when available.
+    bool Initialize(const char *envCubemapFolder = nullptr,
+                    float envIntensity = 1.0f);
     void Shutdown();
     void BeginFrame();
     void EndFrame();

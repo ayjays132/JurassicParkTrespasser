@@ -5,7 +5,7 @@
 
 namespace VR {
 
-bool Initialize() {
+bool Initialize(const char *, float) {
 #ifdef __ANDROID__
     __android_log_print(ANDROID_LOG_INFO, "Trespasser", "VR Android Initialize stub");
 #endif

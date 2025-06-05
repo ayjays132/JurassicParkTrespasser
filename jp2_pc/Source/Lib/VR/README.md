@@ -8,11 +8,12 @@ To build for Android enable the `ENABLE_OCULUS_QUEST_SUPPORT` option and use an 
 
 ### Environment Renderer
 The optional modern environment renderer (`ENABLE_MODERN_ENV_RENDER`) now loads
-a cubemap using OpenGL and draws it each frame. Pass the cubemap folder to
-`VR::Initialize()` when starting the application. If the required OpenGL
+a cubemap using OpenGL and draws it each frame. Pass the cubemap folder and an
+optional intensity value to `VR::Initialize()` when starting the application.
+If the required OpenGL
 development libraries are not present the build instead compiles a stub and the
- environment will not be rendered. The environment intensity and orientation can
- be adjusted at runtime via `VR::SetEnvironmentIntensity()` and
+environment will not be rendered. The environment intensity and orientation can
+be adjusted at runtime via `VR::SetEnvironmentIntensity()` and
  `VR::SetEnvironmentRotation()` whenever the renderer is available.
 Shader compilation and program linking errors are now reported to the console
 to aid debugging when OpenGL is used.
