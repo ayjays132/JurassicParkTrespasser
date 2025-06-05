@@ -36,7 +36,22 @@ include(cmake/CMakeCommon.cmake)
 include_directories(
     ${CMAKE_SOURCE_DIR}/../Lib           # for GblInc headers
     ${CMAKE_SOURCE_DIR}/Source/gblinc
+    ${CMAKE_SOURCE_DIR}/Inc/DirectX      # legacy DirectX headers like dsound.h
 )
+
+if(NOT WIN32)
+    # On non-Windows platforms the mingw-w64 headers provide Windows API stubs
+    find_path(MINGW_INCLUDE_DIR windows.h
+        PATHS /usr/x86_64-w64-mingw32/include /usr/i686-w64-mingw32/include
+        /usr/share/mingw-w64/include
+    )
+    if(MINGW_INCLUDE_DIR)
+        message(STATUS "Using mingw headers from ${MINGW_INCLUDE_DIR}")
+        include_directories(SYSTEM ${MINGW_INCLUDE_DIR})
+    else()
+        message(WARNING "windows.h not found; build may fail")
+    endif()
+endif()
 
 # Optional features
 option(ENABLE_OCULUS_QUEST_SUPPORT "Build with Oculus Quest VR support" OFF)
