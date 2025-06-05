@@ -2,6 +2,13 @@
 
 This repository contains the source code for Jurassic Park: Trespasser. The project can be built on Windows and Linux using CMake. Support for Oculus Quest VR is available via a minimal stub implementation.
 
+## Initial Setup
+
+1. Install CMake **3.15** or newer and ensure a C++17 capable compiler is present (Visual Studio 2019, GCC 9+, or Clang 10+).
+2. Clone the repository and confirm that **AGENTS.md** (note the trailing `s`) is located at the repository root.
+3. Verify `cmake --version` works from your shell.
+4. Follow the workflow below to generate and build the project.
+
 ## Contribution Guidelines
 
 * **Commit Messages**: Follow the format described in `.github/commit_guidelines.txt`.
