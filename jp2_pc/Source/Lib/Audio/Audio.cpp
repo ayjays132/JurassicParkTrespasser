@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1997
+ * Copyright Â© DreamWorks Interactive. 1997
  *
  * Contents:
  *	CAudio
@@ -246,7 +246,7 @@
 #include "AudioLoader.hpp"
 
 #include "Lib/Sys/DebugConsole.hpp"
-#include "lib/sys/memorylog.hpp"
+#include "Lib/Sys/MemoryLog.hpp"
 #include "eax.h"			// Creative environmental audio
 
 

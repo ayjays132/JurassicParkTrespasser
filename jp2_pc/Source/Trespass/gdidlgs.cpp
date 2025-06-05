@@ -24,7 +24,7 @@
 #include "uiwnd.h"
 #include "rasterdc.hpp"
 #include "..\Lib\Sys\reg.h"
-#include "..\lib\sys\reginit.hpp"
+#include "../Lib/Sys/RegInit.hpp"
 #include "dddevice.hpp"
 #include "winctrls.h"
 #include "gdidlgs.h"

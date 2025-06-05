@@ -21,7 +21,7 @@
 #include "resource.h"
 #include "main.h"
 #include "..\Lib\Sys\reg.h"
-#include "..\lib\sys\reginit.hpp"
+#include "../Lib/Sys/RegInit.hpp"
 #include "supportfn.hpp"
 #include "tpassglobals.h"
 #include "gblinc/buildver.hpp"

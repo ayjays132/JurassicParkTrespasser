@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1996
+ * Copyright Â© DreamWorks Interactive. 1996
  *
  * Contents:
  *			CAIInfo
@@ -87,7 +87,7 @@
 #include "AITypes.hpp"
 #include "AIMain.hpp"
 #include "Feeling.hpp"
-#include "Lib/sys/MemoryLog.hpp"
+#include "Lib/Sys/MemoryLog.hpp"
 
 
 class CObjectValue;

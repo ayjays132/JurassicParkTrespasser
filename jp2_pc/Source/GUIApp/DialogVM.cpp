@@ -1,6 +1,6 @@
 /**********************************************************************************************
  *
- * Copyright © DreamWorks Interactive, 1997
+ * Copyright Â© DreamWorks Interactive, 1997
  *
  * Contents: Implementation of 'DialogVM.hpp'
  *
@@ -85,7 +85,7 @@
 #include "GUIAppDlg.h"
 #include "DialogVM.hpp"
 #include "Lib/Sys/VirtualMem.hpp"
-#include "Lib/sys/fileEx.hpp"
+#include "Lib/Sys/fileEx.hpp"
 #include "Lib/Loader/TextureManager.hpp"
 #include "Lib/Loader/ImageLoader.hpp"
 #include "Lib/EntityDBase/WorldDBase.hpp"

@@ -1,6 +1,6 @@
 /**********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1996
+ * Copyright Â© DreamWorks Interactive. 1996
  *
  * Contents: The implementation of PlatonicInstance.hpp.
  *
@@ -31,7 +31,7 @@
 #include "Common.hpp"
 #include "PlatonicInstance.hpp"
 #include "Lib/Std/Hash.hpp"
-#include "Lib/sys/MemoryLog.hpp"
+#include "Lib/Sys/MemoryLog.hpp"
 
 //
 // Module specific variables.

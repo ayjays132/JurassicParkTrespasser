@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1997
+ * Copyright Â© DreamWorks Interactive. 1997
  *
  * Implementation of PartitionSpace.hpp.
  *
@@ -93,7 +93,7 @@
 #include "Lib/Loader/SaveBuffer.hpp"
 #include "Lib/Std/Hash.hpp"
 #include "Lib/Sys/MemoryLog.hpp"
-#include "Lib/sys/DebugConsole.hpp"
+#include "Lib/Sys/DebugConsole.hpp"
 #include "Lib/Std/Random.hpp"
 #include "Lib/Renderer/ShapePresence.hpp"
 

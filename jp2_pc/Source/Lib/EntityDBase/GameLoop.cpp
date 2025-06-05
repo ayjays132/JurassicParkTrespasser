@@ -1,6 +1,6 @@
 /**********************************************************************************************
  *
- * Copyright © DreamWorks Interactive, 1996
+ * Copyright Â© DreamWorks Interactive, 1996
  *
  * Contents:
  *		Implementation of GameLoop.hpp.
@@ -66,7 +66,7 @@
 #include "Lib/EntityDBase/MessageLog.hpp"
 #include "Lib/Renderer/Pipeline.hpp"
 
-#include "Lib/sys/MemoryLog.hpp"
+#include "Lib/Sys/MemoryLog.hpp"
 //
 // Class implementations.
 //

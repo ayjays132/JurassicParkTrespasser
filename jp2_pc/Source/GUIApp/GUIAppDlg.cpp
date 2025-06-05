@@ -1,6 +1,6 @@
 /*********************************************************************************************
  *
- * Copyright © DreamWorks Interactive, 1996
+ * Copyright Â© DreamWorks Interactive, 1996
  *
  * Contents: Implementation of 'GUIAppDlg.h.'
  *
@@ -199,8 +199,8 @@
 #include "Lib/Std/Hash.hpp"
 
 #include "Lib/Trigger/Trigger.hpp"
-#include "Lib/sys/Reg.h"
-#include "lib/sys/reginit.hpp"
+#include "Lib/Sys/Reg.h"
+#include "Lib/Sys/RegInit.hpp"
 #include "lib/loader/LoadTexture.hpp"
 
 
