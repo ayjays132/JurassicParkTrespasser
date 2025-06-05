@@ -69,6 +69,12 @@ The renderer exposes basic controls for VR integration. Use
 `Renderer::SetEnvironmentIntensity()` to adjust brightness and
 `Renderer::SetEnvironmentRotation()` to orient the cubemap dynamically.
 
+## SDL Game Controller Input
+Desktop builds optionally support modern game controllers via SDL2.
+Enable the feature with the `USE_SDL_CONTROLLER` CMake option. When
+enabled the System library links against SDL2 and `CInput` will query
+connected gamepads for movement and basic button actions.
+
 ## Android Build Setup
 
 The Android port uses the official Android NDK. Install version r21 or newer via

@@ -65,6 +65,7 @@
 #define HEADER_LIB_CONTROL_CONTROL_HPP
 
 //#define USE_DIRECTINPUT
+//#define USE_SDL_CONTROLLER
 
 #include "Lib/EntityDBase/Entity.hpp"
 #include "Lib/EntityDBase/Subsystem.hpp"

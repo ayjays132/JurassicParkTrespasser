@@ -81,4 +81,11 @@ add_common_options()
 
 add_library(${PROJECT_NAME} STATIC ${System_Inc} ${System_Src} ${System_Rsc} )
 
+option(USE_SDL_CONTROLLER "Use SDL2 for modern game controller input" OFF)
+if(USE_SDL_CONTROLLER)
+    find_package(SDL2 REQUIRED)
+    target_link_libraries(${PROJECT_NAME} PUBLIC SDL2::SDL2)
+    target_compile_definitions(${PROJECT_NAME} PUBLIC USE_SDL_CONTROLLER)
+endif()
+
 set_target_properties(${PROJECT_NAME} PROPERTIES FOLDER Lib/Util)
