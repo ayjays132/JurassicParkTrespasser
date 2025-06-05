@@ -59,6 +59,22 @@ void EndFrame() {
 #endif
 }
 
+void SetEnvironmentIntensity(float intensity) {
+#ifdef ENABLE_OCULUS_QUEST_SUPPORT
+  Renderer::SetEnvironmentIntensity(intensity);
+#else
+  (void)intensity;
+#endif
+}
+
+void SetEnvironmentRotation(const float rotation[16]) {
+#ifdef ENABLE_OCULUS_QUEST_SUPPORT
+  Renderer::SetEnvironmentRotation(rotation);
+#else
+  (void)rotation;
+#endif
+}
+
 SInput GetControllerInput() {
   SInput input{};
 #ifdef ENABLE_OCULUS_QUEST_SUPPORT

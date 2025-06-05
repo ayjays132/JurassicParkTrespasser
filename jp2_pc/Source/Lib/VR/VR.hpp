@@ -14,10 +14,19 @@ namespace VR {
 
 // Provide the path to a cubemap folder when initialising so the modern
 // environment renderer can load the textures.
-bool Initialize(const char *envCubemapFolder = nullptr);
-void Shutdown();
-void BeginFrame();
-void EndFrame();
+    bool Initialize(const char *envCubemapFolder = nullptr);
+    void Shutdown();
+    void BeginFrame();
+    void EndFrame();
+
+// Adjust the environment brightness. Values above 1.0 brighten the cubemap
+// while values below 1.0 darken it. Has no effect when the modern renderer
+// is not available.
+void SetEnvironmentIntensity(float intensity);
+
+// Apply a rotation matrix to the environment cubemap. Rotation should be a
+// 4x4 column-major matrix. Does nothing on stub builds.
+void SetEnvironmentRotation(const float rotation[16]);
 
 // Retrieve input from VR controllers when available.
 SInput GetControllerInput();
