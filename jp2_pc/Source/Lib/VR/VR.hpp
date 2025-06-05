@@ -8,6 +8,7 @@
 #include "Lib/Renderer/EnvironmentModern.hpp"
 #include <GLES3/gl3.h>
 #endif
+#include "Lib/Control/Control.hpp"
 
 namespace VR {
 
@@ -17,6 +18,9 @@ bool Initialize(const char *envCubemapFolder = nullptr);
 void Shutdown();
 void BeginFrame();
 void EndFrame();
+
+// Retrieve input from VR controllers when available.
+SInput GetControllerInput();
 
 } // namespace VR
 

@@ -53,4 +53,12 @@ void EndFrame() {
 #endif
 }
 
+SInput GetControllerInput() {
+  SInput input{};
+#ifdef ENABLE_OCULUS_QUEST_SUPPORT
+  // Integrate actual VR controller input here when available
+#endif
+  return input;
+}
+
 } // namespace VR

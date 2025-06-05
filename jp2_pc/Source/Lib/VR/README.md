@@ -15,3 +15,8 @@ environment will not be rendered. The environment intensity and orientation can
 be adjusted at runtime via `Renderer::SetEnvironmentIntensity()` and
 `Renderer::SetEnvironmentRotation()` whenever the renderer is available.
 
+### Controller Input
+`VR::GetControllerInput()` returns an `SInput` struct describing the state of any
+connected VR controllers. The current implementation is a stub which will return
+zeroed values when no VR controller integration is available.
+
