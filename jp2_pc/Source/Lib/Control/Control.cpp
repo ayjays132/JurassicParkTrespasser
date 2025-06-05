@@ -81,6 +81,9 @@
 #ifdef USE_DIRECTINPUT
 #include <DirectX/DInput.h>
 #endif //#ifdef USE_DIRECTINPUT
+#ifdef USE_SDL_CONTROLLER
+#include <SDL2/SDL.h>
+#endif
 
 extern bool         bInvertMouse;
 extern bool         bIsTrespasser;
@@ -894,7 +897,38 @@ SInput& CInput::tinReadGameController()
         tin_Input.v2Rotate = CVector2<>(0.0f, 0.0f);
 
 #ifdef USE_SDL_CONTROLLER
-        // SDL2 controller query would go here
+        static bool b_init = false;
+        if (!b_init) {
+                if (SDL_Init(SDL_INIT_GAMECONTROLLER) == 0)
+                        b_init = true;
+        }
+        if (b_init) {
+                SDL_GameController *pad = nullptr;
+                for (int i = 0; i < SDL_NumJoysticks(); ++i) {
+                        if (SDL_IsGameController(i)) {
+                                pad = SDL_GameControllerOpen(i);
+                                break;
+                        }
+                }
+                if (pad) {
+                        const Sint16 lx = SDL_GameControllerGetAxis(pad, SDL_CONTROLLER_AXIS_LEFTX);
+                        const Sint16 ly = SDL_GameControllerGetAxis(pad, SDL_CONTROLLER_AXIS_LEFTY);
+                        const Sint16 rx = SDL_GameControllerGetAxis(pad, SDL_CONTROLLER_AXIS_RIGHTX);
+                        const Sint16 ry = SDL_GameControllerGetAxis(pad, SDL_CONTROLLER_AXIS_RIGHTY);
+
+                        tin_Input.v2Move = CVector2<>(lx / 32767.0f, -ly / 32767.0f);
+                        tin_Input.v2Rotate = CVector2<>(rx / 32767.0f, -ry / 32767.0f);
+
+                        if (SDL_GameControllerGetButton(pad, SDL_CONTROLLER_BUTTON_A))
+                                tin_Input.u4ButtonState |= uCMD_USE;
+                        if (SDL_GameControllerGetButton(pad, SDL_CONTROLLER_BUTTON_B))
+                                tin_Input.u4ButtonState |= uCMD_STOW;
+                        if (SDL_GameControllerGetButton(pad, SDL_CONTROLLER_BUTTON_RIGHTSHOULDER))
+                                tin_Input.u4ButtonState |= uCMD_SHIFT;
+
+                        SDL_GameControllerClose(pad);
+                }
+        }
 #endif
 
         return tin_Input;
