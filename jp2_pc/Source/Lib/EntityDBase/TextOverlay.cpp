@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1998
+ * Copyright Â© DreamWorks Interactive. 1998
  *
  * Contents:
  *	CTextOverlay
@@ -41,7 +41,7 @@
  ***********************************************************************************************/
 
 #include "common.hpp"
-#include "Lib/W95\winInclude.hpp"
+#include "Lib/W95/winInclude.hpp"
 #include "TextOverlay.hpp"
 #include "Lib/View/RasterVid.hpp"
 #include "Lib/W95/DDFont.hpp"

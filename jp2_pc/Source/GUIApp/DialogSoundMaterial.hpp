@@ -1,6 +1,6 @@
 /**********************************************************************************************
  *
- * Copyright © DreamWorks Interactive, 1998
+#include "Lib/EntityDBase/Instance.hpp"
  *
  * Contents:	Sound Material Dialog
  *

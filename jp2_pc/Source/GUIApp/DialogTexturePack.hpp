@@ -1,6 +1,6 @@
 /**********************************************************************************************
  *
- * Copyright © DreamWorks Interactive, 1997
+#include "Lib/Loader/TexturePackSurface.hpp"
  *
  * Contents:
  *		Dialog box for displaying packed surfaces

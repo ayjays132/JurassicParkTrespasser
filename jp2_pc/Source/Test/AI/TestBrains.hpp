@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1996
+ * Copyright Â© DreamWorks Interactive. 1996
  *
  * Contents:
  *	Test Brain classes for AI Test app.  The test classes have predefined sets of activities and
@@ -75,7 +75,7 @@
 #ifndef HEADER_TEST_AI_TESTBRAIN_HPP
 #define HEADER_TEST_AI_TESTBRAIN_HPP
 
-#include "Game\AI\Brain.hpp"
+#include "Game/AI/Brain.hpp"
 
 #include "TestAnimal.hpp"
 

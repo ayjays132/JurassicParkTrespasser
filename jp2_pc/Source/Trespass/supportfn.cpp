@@ -18,7 +18,7 @@
 #pragma hdrstop
 
 #include "supportfn.hpp"
-#include "..\Lib\Sys\reg.h"
+#include "../Lib/Sys/reg.h"
 #include "../Lib/Sys/RegInit.hpp"
 #include "rasterdc.hpp"
 #include "main.h"

@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1996
+ * Copyright Â© DreamWorks Interactive. 1996
  *
  * Contents:
  *		Pathinder classes for AI library.
@@ -58,8 +58,8 @@
 
 //#include <vector.h>
 
-#include "Lib\Transform\Vector.hpp"
-#include "Lib\Std\Array.hpp"
+#include "Lib/Transform/Vector.hpp"
+#include "Lib/Std/Array.hpp"
 
 #include "Influence.hpp"
 #include "Rating.hpp"

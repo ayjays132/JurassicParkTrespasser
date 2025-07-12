@@ -22,7 +22,7 @@
 #include "supportfn.hpp"
 #include "resource.h"
 #include "video.h"
-#include "..\Lib\Sys\reg.h"
+#include "../Lib/Sys/reg.h"
 #include "../Lib/Sys/RegInit.hpp"
 
 

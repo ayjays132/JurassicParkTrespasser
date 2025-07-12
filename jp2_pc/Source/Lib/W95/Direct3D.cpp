@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive, 1997.
+ * Copyright Â© DreamWorks Interactive, 1997.
  *
  * Contents:
  *		Implementation of Direct3D.hpp.
@@ -81,7 +81,7 @@
 #include "Lib/EntityDBase/Query/QTerrain.hpp"
 #include "Lib/Renderer/Sky.hpp"
 #include "Lib/EntityDBase/Water.hpp"
-#include "Lib/Renderer/Pipeline.hpp"
+#include "Lib/Renderer/PipeLine.hpp"
 #include "Lib/Sys/W95/Render.hpp"
 #include "Lib/Renderer/RenderCache.hpp"
 #include "Lib/Std/MemLimits.hpp"

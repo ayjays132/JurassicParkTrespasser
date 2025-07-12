@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1996
+ * Copyright Â© DreamWorks Interactive. 1996
  *
  * Implementation of Water.hpp.
  *
@@ -91,7 +91,7 @@
 #endif
 
 #include "Lib/GeomDBase/Mesh.hpp"
-#include "Lib/Renderer/Pipeline.hpp"
+#include "Lib/Renderer/PipeLine.hpp"
 #include "Lib/Physics/Waves.hpp"
 #include "Lib/Groff/VTParse.hpp"
 #include "Lib/EntityDBase/MessageTypes/MsgStep.hpp"

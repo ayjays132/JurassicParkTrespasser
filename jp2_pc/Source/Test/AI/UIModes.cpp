@@ -1,6 +1,6 @@
 /**********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1996
+ * Copyright Â© DreamWorks Interactive. 1996
  *
  * Implementation of UIModes.hpp
  *
@@ -57,7 +57,7 @@
 #include "UIModes.hpp"
 
 #include "Lib/W95/WinInclude.hpp"
-#include "Shell\WinShell.hpp"
+#include "Shell/WinShell.hpp"
 
 #include "airesource.h"
 

@@ -2,9 +2,9 @@
 // GUIAPP.RC2 - resources Microsoft Visual C++ does not edit directly
 //
 #ifdef __MWERKS__
- #include "Shell\WinShell.rc"
+ #include "Shell/WinShell.rc"
 #else
- #include "Shell\WinShell.rc"
+ #include "Shell/WinShell.rc"
 #endif
 
 #ifdef APSTUDIO_INVOKED

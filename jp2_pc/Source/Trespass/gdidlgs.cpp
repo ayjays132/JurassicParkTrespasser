@@ -23,15 +23,15 @@
 #include "main.h"
 #include "uiwnd.h"
 #include "rasterdc.hpp"
-#include "..\Lib\Sys\reg.h"
+#include "../Lib/Sys/reg.h"
 #include "../Lib/Sys/RegInit.hpp"
 #include "dddevice.hpp"
 #include "winctrls.h"
 #include "gdidlgs.h"
 #include "dlgrender.h"
 #include "grab.hpp"
-#include "..\lib\loader\savefile.hpp"
-#include "..\Lib\GeomDBase\LightShape.hpp"
+#include "../lib/loader/savefile.hpp"
+#include "../Lib/GeomDBase/LightShape.hpp"
 
 extern HINSTANCE    g_hInst;
 extern HWND		    g_hwnd;

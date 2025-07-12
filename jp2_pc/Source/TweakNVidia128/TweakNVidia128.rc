@@ -34,7 +34,7 @@ END
 
 2 TEXTINCLUDE DISCARDABLE 
 BEGIN
-    "#include ""afxres.h""\r\n"
+    "#include ""afxres.h""/r/n"
     "\0"
 END
 
@@ -50,8 +50,8 @@ BEGIN
     "LANGUAGE 9, 1\r\n"
     "#pragma code_page(1252)\r\n"
     "#endif\r\n"
-    "#include ""res\\TweakNVidia128.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
-    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""res//TweakNVidia128.rc2""  // non-Microsoft Visual C++ edited resources/r/n"
+    "#include ""afxres.rc""         // Standard components/r/n"
     "#endif\0"
 END
 
@@ -202,7 +202,7 @@ END
 LANGUAGE 9, 1
 #pragma code_page(1252)
 #endif
-#include "res\TweakNVidia128.rc2"  // non-Microsoft Visual C++ edited resources
+#include "res/TweakNVidia128.rc2"  // non-Microsoft Visual C++ edited resources
 #include "afxres.rc"         // Standard components
 #endif
 /////////////////////////////////////////////////////////////////////////////

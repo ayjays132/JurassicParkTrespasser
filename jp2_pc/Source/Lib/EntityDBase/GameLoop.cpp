@@ -64,7 +64,7 @@
 #include "Lib/EntityDBase/FrameHeap.hpp"
 #include "Lib/EntityDBase/QueueMessage.hpp"
 #include "Lib/EntityDBase/MessageLog.hpp"
-#include "Lib/Renderer/Pipeline.hpp"
+#include "Lib/Renderer/PipeLine.hpp"
 
 #include "Lib/Sys/MemoryLog.hpp"
 //

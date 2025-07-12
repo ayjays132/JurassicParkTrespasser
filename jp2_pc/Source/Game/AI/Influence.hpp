@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1996
+ * Copyright Â© DreamWorks Interactive. 1996
  *
  * Contents:
  *	CInfluence class for AI library.
@@ -58,7 +58,7 @@
 
 #include "NodeSource.hpp"
 
-#include "Lib\Transform\Vector.hpp"
+#include "Lib/Transform/Vector.hpp"
 //#include "Lib/EntityDBase/Animal.hpp"
 #include "Lib/Sys/Timer.hpp"
 

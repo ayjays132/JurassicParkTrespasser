@@ -1,6 +1,6 @@
 /**********************************************************************************************
  *
- * Copyright © DreamWorks Interactive, 1998
+#include "Lib/EntityDBase/WorldDBase.hpp"
  *
  * Contents: Implementation of QualityDialog.hpp
  *

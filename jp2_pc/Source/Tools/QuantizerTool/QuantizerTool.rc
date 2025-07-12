@@ -34,7 +34,7 @@ END
 
 2 TEXTINCLUDE DISCARDABLE 
 BEGIN
-    "#include ""afxres.h""\r\n"
+    "#include ""afxres.h""/r/n"
     "\0"
 END
 
@@ -50,8 +50,8 @@ BEGIN
     "LANGUAGE 9, 1\r\n"
     "#pragma code_page(1252)\r\n"
     "#endif\r\n"
-    "#include ""res\\QuantizerTool.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
-    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""res//QuantizerTool.rc2""  // non-Microsoft Visual C++ edited resources/r/n"
+    "#include ""afxres.rc""         // Standard components/r/n"
     "#endif\0"
 END
 
@@ -80,7 +80,7 @@ BEGIN
     CONTROL         "",IDC_STATIC,"Static",SS_BITMAP,11,17,18,20
     LTEXT           "QuantizerTool Version 1.0",IDC_STATIC,40,10,119,8,
                     SS_NOPREFIX
-    LTEXT           "Copyright © Dreamworks Interactive 1997",IDC_STATIC,40,
+    LTEXT           "Copyright Â© Dreamworks Interactive 1997",IDC_STATIC,40,
                     25,149,9
     DEFPUSHBUTTON   "OK",IDOK,178,7,32,14,WS_GROUP
 END
@@ -130,7 +130,7 @@ BEGIN
             VALUE "FileDescription", "QUANTIZERTOOL MFC Application\0"
             VALUE "FileVersion", "1, 0, 0, 1\0"
             VALUE "InternalName", "QUANTIZERTOOL\0"
-            VALUE "LegalCopyright", "Copyright © 1996\0"
+            VALUE "LegalCopyright", "Copyright Â© 1996\0"
             VALUE "LegalTrademarks", "\0"
             VALUE "OriginalFilename", "QUANTIZERTOOL.EXE\0"
             VALUE "ProductName", "QUANTIZERTOOL Application\0"
@@ -203,7 +203,7 @@ END
 LANGUAGE 9, 1
 #pragma code_page(1252)
 #endif
-#include "res\QuantizerTool.rc2"  // non-Microsoft Visual C++ edited resources
+#include "res/QuantizerTool.rc2"  // non-Microsoft Visual C++ edited resources
 #include "afxres.rc"         // Standard components
 #endif
 /////////////////////////////////////////////////////////////////////////////

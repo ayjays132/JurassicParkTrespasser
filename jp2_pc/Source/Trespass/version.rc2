@@ -1,8 +1,8 @@
 
 
 
-#include "..\gblinc\config.hpp"
-#include "..\gblinc\version.hpp"
+#include "../gblinc/config.hpp"
+#include "../gblinc/version.hpp"
 
 #ifndef _MAC
 /////////////////////////////////////////////////////////////////////////////
@@ -37,7 +37,7 @@ BEGIN
 #endif
             VALUE "FileVersion", BUILD_VERSION
             VALUE "InternalName", "trespass\0"
-            VALUE "LegalCopyright", "Copyright © 1998\0"
+            VALUE "LegalCopyright", "Copyright Â© 1998\0"
             VALUE "OriginalFilename", "trespass.exe\0"
             VALUE "ProductName", "Trespasser\0"
             VALUE "ProductVersion", BUILD_VERSION

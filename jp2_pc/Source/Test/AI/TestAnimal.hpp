@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1996
+ * Copyright Â© DreamWorks Interactive. 1996
  *
  * Contents:
  *		CTestAnimal class for AI test app.  This is a special case object derived from CTestObject
@@ -44,7 +44,7 @@
 
 //#include "Test/AI/TestObject.hpp"
 #include "FakeShape.hpp"
-#include "Lib\EntityDBase\Animal.hpp"
+#include "Lib/EntityDBase/Animal.hpp"
 #include "FakePhysics.hpp"
 #include "Lib/GeomDBase/Shape.hpp"
 #include "Game/AI/AIInfo.hpp"

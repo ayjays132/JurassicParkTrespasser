@@ -1,6 +1,6 @@
 /**********************************************************************************************
  *
- * Copyright © DreamWorks Interactive, 1996
+ * Copyright Â© DreamWorks Interactive, 1996
  *
  * Contents:
  *		Implementation of 'DialogPhysics.hpp.'
@@ -115,7 +115,7 @@
 #include "StdAfx.h"
 #include "DialogRenderCache.hpp"
 #include "Lib/Renderer/RenderCacheInterface.hpp"
-#include "Lib/Renderer/Pipeline.hpp"
+#include "Lib/Renderer/PipeLine.hpp"
 #include "Lib/EntityDBase/WorldDBase.hpp"
 #include "Lib/Sys/Scheduler.hpp"
 

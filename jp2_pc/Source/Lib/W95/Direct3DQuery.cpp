@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive, 1998.
+ * Copyright Â© DreamWorks Interactive, 1998.
  *
  * Contents:
  *		Direct3D query functions.
@@ -137,7 +137,7 @@
 #include <memory.h>
 #include <string.h>
 #include <stdio.h>
-#include <Windows.h>
+#include <windows.h>
 #include <ddraw.h>
 #define D3D_OVERLOADS
 #include <d3d.h>

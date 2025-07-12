@@ -34,7 +34,7 @@ END
 
 2 TEXTINCLUDE DISCARDABLE 
 BEGIN
-    "#include ""afxres.h""\r\n"
+    "#include ""afxres.h""/r/n"
     "\0"
 END
 
@@ -50,8 +50,8 @@ BEGIN
     "LANGUAGE 9, 1\r\n"
     "#pragma code_page(1252)\r\n"
     "#endif\r\n"
-    "#include ""res\\InitGUIApp2.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
-    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""res//InitGUIApp2.rc2""  // non-Microsoft Visual C++ edited resources/r/n"
+    "#include ""afxres.rc""         // Standard components/r/n"
     "#endif\0"
 END
 
@@ -115,7 +115,7 @@ BEGIN
             VALUE "FileDescription", "INITGUIAPP2 MFC Application\0"
             VALUE "FileVersion", "1, 0, 0, 1\0"
             VALUE "InternalName", "INITGUIAPP2\0"
-            VALUE "LegalCopyright", "Copyright © 1998\0"
+            VALUE "LegalCopyright", "Copyright Â© 1998\0"
             VALUE "LegalTrademarks", "\0"
             VALUE "OriginalFilename", "INITGUIAPP2.EXE\0"
             VALUE "ProductName", "INITGUIAPP2 Application\0"
@@ -169,7 +169,7 @@ END
 LANGUAGE 9, 1
 #pragma code_page(1252)
 #endif
-#include "res\InitGUIApp2.rc2"  // non-Microsoft Visual C++ edited resources
+#include "res/InitGUIApp2.rc2"  // non-Microsoft Visual C++ edited resources
 #include "afxres.rc"         // Standard components
 #endif
 /////////////////////////////////////////////////////////////////////////////

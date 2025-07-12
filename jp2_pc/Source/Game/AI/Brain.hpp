@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1996
+ * Copyright Â© DreamWorks Interactive. 1996
  *
  * Contents:
  *		CBrain class for AI library.  CBrain handles all processing and data
@@ -73,7 +73,7 @@
 #define HEADER_LIB_AI_BRAIN_HPP
 
 
-#include "Lib\Sys\Textout.hpp"
+#include "Lib/Sys/Textout.hpp"
 //#include "MentalState.hpp"
 //#include "Activity.hpp"
 #include "ActivityEnum.hpp"

@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1996
+ * Copyright Â© DreamWorks Interactive. 1996
  *
  * Implementation of Profile.hpp.
  *
@@ -58,7 +58,7 @@
 #include "Common.hpp"
 
 // Uses the Windows GetCurrentTime() function.
-#include <Lib\W95\WinInclude.hpp>
+#include <Lib/W95/WinInclude.hpp>
 #include "Profile.hpp"
 
 #include "Lib/Sys/Textout.hpp"

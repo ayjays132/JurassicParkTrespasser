@@ -1,6 +1,6 @@
 /**********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1998
+ * Copyright Â© DreamWorks Interactive. 1998
  *
  * Contents: Support for a list of locations that we may teleport the player to.
  *
@@ -56,7 +56,7 @@
 #include "Lib/EntityDBase/Teleport.hpp"
 #include "Lib/Renderer/Camera.hpp"
 #include "Lib/EntityDBase/Query/QRenderer.hpp"
-#include "Lib\EntityDBase\Query\QTerrain.hpp"
+#include "Lib/EntityDBase/Query/QTerrain.hpp"
 #include "Lib/EntityDBase/RenderDB.hpp"
 #include "Lib/EntityDBase/WorldDBase.hpp"
 #include "Lib/Loader/SaveFile.hpp"

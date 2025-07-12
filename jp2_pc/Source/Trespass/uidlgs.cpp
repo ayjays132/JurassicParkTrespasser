@@ -27,7 +27,7 @@
 #include "uidlgs.h"
 #include "video.h"
 #include "token.h"
-#include "..\Lib\Sys\reg.h"
+#include "../Lib/Sys/reg.h"
 #include "../Lib/Sys/RegInit.hpp"
 #include "keyremap.h"
 

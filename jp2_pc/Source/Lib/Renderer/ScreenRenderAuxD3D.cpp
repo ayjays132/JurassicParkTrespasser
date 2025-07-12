@@ -1,6 +1,6 @@
 /**********************************************************************************************
  *
- * Copyright © DreamWorks Interactive, 1997.
+ * Copyright Â© DreamWorks Interactive, 1997.
  *
  * Contents:
  *
@@ -198,7 +198,7 @@
 #include "Lib/Renderer/Sky.hpp"
 #include "Lib/View/AGPTextureMemManager.hpp"
 #include "Lib/View/RasterConvertD3D.hpp"
-#include "Lib\Std\LocalArray.hpp"
+#include "Lib/Std/LocalArray.hpp"
 #include "ScreenRenderAuxD3DBatch.hpp"
 #include "ScreenRenderAuxD3DUtilities.hpp"
 #include "Lib/Sys/W95/Render.hpp"

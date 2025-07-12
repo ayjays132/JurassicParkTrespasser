@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1996
+ * Copyright Â© DreamWorks Interactive. 1996
  *
  * Contents:
  *		Header file to include the 'Windows.h' file without interfering with STL.
@@ -59,8 +59,8 @@
 	#define VC_EXTRA_LEAN
 #endif // VC_EXTRA_LEAN
 
-#include <Windows.h>
-#include "LZExpand.h"				// file decompress header file.
+#include <windows.h>
+#include <lzexpand.h>				// file decompress header file.
 
 #pragma 
 

@@ -20,7 +20,7 @@
 #include <time.h>
 #include "resource.h"
 #include "main.h"
-#include "..\Lib\Sys\reg.h"
+#include "../Lib/Sys/reg.h"
 #include "../Lib/Sys/RegInit.hpp"
 #include "supportfn.hpp"
 #include "tpassglobals.h"

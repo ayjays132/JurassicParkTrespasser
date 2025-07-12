@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1996
+ * Copyright Â© DreamWorks Interactive. 1996
  *
  * Contents:
  *		Test child classes of CShapeInfo
@@ -60,7 +60,7 @@
 
 
 
-#include "Lib\Sys\Timer.hpp"
+#include "Lib/Sys/Timer.hpp"
 
 //**********************************************************************************************
 //

@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1996
+ * Copyright Â© DreamWorks Interactive. 1996
  *
  * Implementation of Query.hpp.
  *
@@ -58,7 +58,7 @@
 #include "Lib/GeomDBase/TerrainObj.hpp"
 #include "Lib/Renderer/Camera.hpp"
 #include "Lib/Renderer/Light.hpp"
-#include "Lib/Renderer/Pipeline.hpp"
+#include "Lib/Renderer/PipeLine.hpp"
 #include "Lib/Physics/Magnet.hpp"
 #include "Game/DesignDaemon/Daemon.hpp"
 #include "WorldPriv.hpp"

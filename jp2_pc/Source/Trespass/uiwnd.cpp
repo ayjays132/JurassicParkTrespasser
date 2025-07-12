@@ -20,7 +20,7 @@
 #include "supportfn.hpp"
 #include "uiwnd.h"
 #include "main.h"
-#include "..\Lib\Sys\reg.h"
+#include "../Lib/Sys/reg.h"
 #include "../Lib/Sys/RegInit.hpp"
 #include "token.h"
 #include "Lib/EntityDBase/Water.hpp"

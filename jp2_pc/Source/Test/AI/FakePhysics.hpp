@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1996
+ * Copyright Â© DreamWorks Interactive. 1996
  *
  * Contents:
  *		Fake information classes for
@@ -56,10 +56,10 @@
 #ifndef HEADER_TEST_AI_FAKEPHYSICS_HPP
 #define HEADER_TEST_AI_FAKEPHYSICS_HPP
 
-#include "Lib\EntityDBase\Entity.hpp"
-#include "Lib\Physics\InfoBox.hpp"
+#include "Lib/EntityDBase/Entity.hpp"
+#include "Lib/Physics/InfoBox.hpp"
 
-#include "Lib\Sys\Timer.hpp"
+#include "Lib/Sys/Timer.hpp"
 
 #include "Game/AI/Rating.hpp"
 

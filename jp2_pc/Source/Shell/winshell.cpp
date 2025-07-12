@@ -1,6 +1,6 @@
 /**********************************************************************************************
  *
- * Copyright © DreamWorks Interactive, 1996
+ * Copyright Â© DreamWorks Interactive, 1996
  *
  * Implementation of 'WinShell.hpp.'
  *
@@ -754,7 +754,7 @@ quit:
 LRESULT CALLBACK WndProc
 (
 	HWND h_wnd,			// The handle of the window handling the message.
-	uint u_message,		// The message ID, usually based on a #define in <Windows.h>.
+	uint u_message,		// The message ID, usually based on a #define in <windows.h>.
 	WPARAM wp_wparam,	// The first descriptive parameter passed with the windows message.
 	LPARAM lp_lparam	// The second descriptive parameter passed with the windows message.
 )

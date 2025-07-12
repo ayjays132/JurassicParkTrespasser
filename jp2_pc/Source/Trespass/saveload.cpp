@@ -26,7 +26,7 @@
 #include "uiwnd.h"
 #include "uidlgs.h"
 #include "cdib.h"
-#include "..\Lib\Sys\reg.h"
+#include "../Lib/Sys/reg.h"
 #include "../Lib/Sys/RegInit.hpp"
 
 
