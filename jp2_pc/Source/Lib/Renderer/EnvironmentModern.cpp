@@ -1,5 +1,3 @@
-#pragma once
-
 #ifdef ENABLE_OCULUS_QUEST_SUPPORT
 
 #include "EnvironmentModern.hpp"
