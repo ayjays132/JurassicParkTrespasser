@@ -5,7 +5,7 @@
 #include "DialogGamma.hpp"
 #include "GUITools.hpp"
 #include "GUIAppDlg.h"
-#include "Lib/Renderer/Pipeline.hpp"
+#include "Lib/Renderer/PipeLine.hpp"
 
 const float fMaxPower = 3.0f;
 const float fMinPower = 0.1f;

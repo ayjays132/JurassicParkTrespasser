@@ -1,6 +1,6 @@
 /**********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1996
+ * Copyright Â© DreamWorks Interactive. 1996
  *
  * Implementation of Repaly.hpp and replay support code
  *
@@ -84,7 +84,7 @@
 #include "lib/control/Control.hpp"
 
 // so we can send menu messages to the GUIApp....
-#include "GUIApp\resource.h"
+#include "GUIApp/resource.h"
 
 //**********************************************************************************************
 //

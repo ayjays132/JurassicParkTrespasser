@@ -1,6 +1,6 @@
 /**********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1996
+ * Copyright Â© DreamWorks Interactive. 1996
  *
  * Contents: The implementation of Animal.hpp.
  *
@@ -70,7 +70,7 @@
 #include "Lib/GeomDBase/Skeleton.hpp"
 #include "Lib/GeomDBase/RayCast.hpp"
 #include "Game/DesignDaemon/Player.hpp"
-#include "Lib\EntityDBase\Query\QTerrain.hpp"
+#include "Lib/EntityDBase/Query/QTerrain.hpp"
 
 //
 // Constants.

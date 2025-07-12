@@ -21,7 +21,7 @@
 #include "resource.h"
 #include "main.h"
 #include "tpassglobals.h"
-#include "..\Lib\Sys\reg.h"
+#include "../Lib/Sys/reg.h"
 #include "../Lib/Sys/RegInit.hpp"
 #include "uiwnd.h"
 #include "uidlgs.h"

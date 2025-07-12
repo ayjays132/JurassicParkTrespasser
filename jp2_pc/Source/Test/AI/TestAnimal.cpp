@@ -1,7 +1,7 @@
 /**********************************************************************************************
  *
  * $Source::																				  $
- * Copyright © DreamWorks Interactive. 1996
+ * Copyright Â© DreamWorks Interactive. 1996
  *
  *	Implementation of all Test Object child classes.
  *		TestAnimal.hpp
@@ -68,8 +68,8 @@
 #include "Common.hpp"
 #include "TestAnimal.hpp"
 
-#include "Game\AI\Classes.hpp"
-#include "Game\AI\Brain.hpp"
+#include "Game/AI/Classes.hpp"
+#include "Game/AI/Brain.hpp"
 
 #include "AITestShell.hpp"
 #include "TestTree.hpp"

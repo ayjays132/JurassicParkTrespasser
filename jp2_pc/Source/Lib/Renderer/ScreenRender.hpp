@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1996
+ * Copyright Â© DreamWorks Interactive. 1996
  *
  * Contents:
  *		CScreenRender					Provides interface to rasterising functions.
@@ -128,7 +128,7 @@
 #include "Texture.hpp"
 #include "Lib/View/RasterVid.hpp"
 #include "Lib/GeomDBase/Plane.hpp"
-#include "Lib\Math\FastInverse.hpp"
+#include "Lib/Math/FastInverse.hpp"
 
 
 //**********************************************************************************************

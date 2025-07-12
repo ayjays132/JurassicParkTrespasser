@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1997
+ * Copyright Â© DreamWorks Interactive. 1997
  *
  * Implementation of CCreatureTrigger defined in Trigger.hpp
  *
@@ -49,7 +49,7 @@
 #include "Lib/Loader/Loader.hpp"
 #include "Lib/Groff/VTParse.hpp"
 #include "Lib/EntityDBase/WorldDBase.hpp"
-#include "Lib\EntityDBase\Animate.hpp"
+#include "Lib/EntityDBase/Animate.hpp"
 #include "Lib/Loader/SaveBuffer.hpp"
 
 #include "Lib/Sys/Profile.hpp"

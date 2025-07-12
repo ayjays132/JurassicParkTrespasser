@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1997
+ * Copyright Â© DreamWorks Interactive. 1997
  *
  * Contents:
  *		Node Graph templates for AI library.
@@ -68,9 +68,9 @@
 
 //#include <vector.h>
 
-#include "Lib\Std\SparseArray.hpp"
-#include "Lib\Std\Array2.hpp"
-#include "Lib\Transform\Vector.hpp"
+#include "Lib/Std/SparseArray.hpp"
+#include "Lib/Std/Array2.hpp"
+#include "Lib/Transform/Vector.hpp"
 
 //lint -save -e1509   // vector<int> destructor not virtual.
 //*********************************************************************************************

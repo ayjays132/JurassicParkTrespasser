@@ -1,6 +1,6 @@
 /**********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1997
+ * Copyright Â© DreamWorks Interactive. 1997
  *
  *	Implementation of WorldView.hpp.
  *
@@ -149,7 +149,7 @@
 #include "AIGraph.hpp"
 #include "Brain.hpp"
 
-#include "Lib\Sys\DebugConsole.hpp"
+#include "Lib/Sys/DebugConsole.hpp"
 
 
 //*********************************************************************************************

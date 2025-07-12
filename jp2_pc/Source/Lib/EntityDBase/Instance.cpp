@@ -1,6 +1,6 @@
 /**********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1996
+ * Copyright Â© DreamWorks Interactive. 1996
  *
  * Contents: The implementation of Instance.hpp.
  *
@@ -70,7 +70,7 @@
 #include "Game/DesignDaemon/HitSpang.hpp"
 #include "Game/DesignDaemon/Socket.hpp"
 
-#include "Lib\Std\Hash.hpp"
+#include "Lib/Std/Hash.hpp"
 
 #include "Lib/Sys/Profile.hpp"
 

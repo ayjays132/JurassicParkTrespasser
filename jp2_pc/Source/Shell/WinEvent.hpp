@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1996
+ * Copyright Â© DreamWorks Interactive. 1996
  *
  * Contents:
  *		WindowsEvent handler interface.
@@ -35,7 +35,7 @@
 #ifndef HEADER_LIB_W95_WINEVENT_HPP
 #define HEADER_LIB_W95_WINEVENT_HPP
 
-#include "Lib\W95\WinInclude.hpp"
+#include "Lib/W95/WinInclude.hpp"
 
 //******************************************************************************************
 //

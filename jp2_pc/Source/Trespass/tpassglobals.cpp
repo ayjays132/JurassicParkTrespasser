@@ -3,7 +3,7 @@
 #include "precomp.h"
 #pragma hdrstop
 
-#include "..\Lib\Sys\reg.h"
+#include "../Lib/Sys/reg.h"
 #include "../Lib/Sys/RegInit.hpp"
 #include "resource.h"
 #include "tpassglobals.h"

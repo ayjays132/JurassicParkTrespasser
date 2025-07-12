@@ -34,16 +34,16 @@ END
 
 2 TEXTINCLUDE DISCARDABLE 
 BEGIN
-    "#include ""afxres.h""\r\n"
+    "#include ""afxres.h""/r/n"
     "\0"
 END
 
 3 TEXTINCLUDE DISCARDABLE 
 BEGIN
-    "#include ""..\\gblinc\\config.hpp""\r\n"
-    "#include ""version.rc2""\r\n"
-    "#include ""res\\usa_keyremap.rc2""\r\n"
-    "#include ""res\\usa_hints.rc2""\0"
+    "#include ""..//gblinc//config.hpp""/r/n"
+    "#include ""version.rc2""/r/n"
+    "#include ""res//usa_keyremap.rc2""/r/n"
+    "#include ""res//usa_hints.rc2""/0"
 END
 
 #endif    // APSTUDIO_INVOKED
@@ -220,10 +220,10 @@ END
 //
 // Generated from the TEXTINCLUDE 3 resource.
 //
-#include "..\gblinc\config.hpp"
+#include "../gblinc/config.hpp"
 #include "version.rc2"
-#include "res\usa_keyremap.rc2"
-#include "res\usa_hints.rc2"
+#include "res/usa_keyremap.rc2"
+#include "res/usa_hints.rc2"
 /////////////////////////////////////////////////////////////////////////////
 #endif    // not APSTUDIO_INVOKED
 

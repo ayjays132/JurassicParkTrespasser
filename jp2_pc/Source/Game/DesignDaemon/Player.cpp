@@ -1,6 +1,6 @@
 /**********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1996
+ * Copyright Â© DreamWorks Interactive. 1996
  *
  * Contents: The implementation of Player.hpp.
  *
@@ -78,7 +78,7 @@
 #include "Lib/View/LineDraw.hpp"
 #include "Lib/Sys/DebugConsole.hpp"
 #include "Lib/Sys/Profile.hpp"
-#include "Lib\EntityDBase\AnimationScript.hpp"
+#include "Lib/EntityDBase/AnimationScript.hpp"
 
 // PREVENT CODE GEN BUG!
 #pragma optimize("g", off)
@@ -444,29 +444,29 @@ namespace
 		// If we parameterise the rotation by the C element of the quaternion (t), then the
 		// rotation is:
 		//
-		//		R = (t, sqrt(1 - t²)A)
+		//		R = (t, sqrt(1 - tÂ²)A)
 		//
 		// We wish to minimise the product of r3_move (Q) and R.  This is done by maximising
 		// the absolute value of the product's C element.  By quaternion multiplication, this is:
 		//
 		//		C = Q.c R.c - Q.S R.S
-		//		  = Q.c t - Q.S A sqrt(1-t²)
-		//		  = X t - Y sqrt(1-t²)				(X == Q.c,  Y == Q.S A)
+		//		  = Q.c t - Q.S A sqrt(1-tÂ²)
+		//		  = X t - Y sqrt(1-tÂ²)				(X == Q.c,  Y == Q.S A)
 		//
-		//		dC/dt = 0 = X - Y (-2t) / (2 sqrt(1-t²))
-		//				  = X + Y t / sqrt(1-t²)
-		//		Y t/sqrt(1-t²) = -X
-		//		Y² t²/(1-t²) = X²
-		//		t²/(1-t²) = X²/Y²
-		//		t² = X²/Y² (1-t²)
-		//		(1 + X²/Y²)t² = X²/Y²
-		//		t² = X²/Y² / (1 + X²/Y²)
-		//		t² = X²/(X² + Y²)
-		//		t = ± X / sqrt(X² + Y²)
+		//		dC/dt = 0 = X - Y (-2t) / (2 sqrt(1-tÂ²))
+		//				  = X + Y t / sqrt(1-tÂ²)
+		//		Y t/sqrt(1-tÂ²) = -X
+		//		YÂ² tÂ²/(1-tÂ²) = XÂ²
+		//		tÂ²/(1-tÂ²) = XÂ²/YÂ²
+		//		tÂ² = XÂ²/YÂ² (1-tÂ²)
+		//		(1 + XÂ²/YÂ²)tÂ² = XÂ²/YÂ²
+		//		tÂ² = XÂ²/YÂ² / (1 + XÂ²/YÂ²)
+		//		tÂ² = XÂ²/(XÂ² + YÂ²)
+		//		t = Â± X / sqrt(XÂ² + YÂ²)
 		//
 		//	To find which sign of t yields the true maximum absolute value of C, examine C again:
 		//
-		//		C = X t - Y sqrt(1-t²)
+		//		C = X t - Y sqrt(1-tÂ²)
 		//
 		//	X t should be the same sign as -Y, thus we want X Y t < 0.
 		//		
@@ -3603,7 +3603,7 @@ private:
 		//	Squaring both sides, expanding the vector equation to 3 scalar equations,
 		//	summing them, and rearranging, we have the quadratic equation
 		//
-		//		H² r² - 2 (H*S) r + S² - d² = 0
+		//		HÂ² rÂ² - 2 (H*S) r + SÂ² - dÂ² = 0
 		//
 
 		// Hand pos starts out as unit vector in desired direction.

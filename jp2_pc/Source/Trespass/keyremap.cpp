@@ -25,7 +25,7 @@
 #include "main.h"
 #include "uiwnd.h"
 #include "uidlgs.h"
-#include "..\Lib\Sys\reg.h"
+#include "../Lib/Sys/reg.h"
 #include "../Lib/Sys/RegInit.hpp"
 #include "keyremap.h"
 

@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1997
+ * Copyright Â© DreamWorks Interactive. 1997
  *
  * Implementation of CLocationTrigger defined in Trigger.hpp
  *
@@ -58,7 +58,7 @@
 #include "Lib/Loader/Loader.hpp"
 #include "Lib/Groff/VTParse.hpp"
 #include "Lib/Loader/SaveBuffer.hpp"
-#include "Game\DesignDaemon\Player.hpp"
+#include "Game/DesignDaemon/Player.hpp"
 
 #include "Lib/Sys/Profile.hpp"
 

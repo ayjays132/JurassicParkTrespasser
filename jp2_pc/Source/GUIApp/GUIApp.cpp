@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1996
+ * Copyright Â© DreamWorks Interactive. 1996
  *
  * Contents:
  *		Implementation of GUIApp.h.
@@ -72,8 +72,8 @@
 #include "Lib/Sys/ProcessorDetect.hpp"
 #include "Lib/Audio/Material.hpp"
 #include "Lib/Sys/Scheduler.hpp"
-#include "lib\w95\dd.hpp"
-#include "lib\view\video.hpp"
+#include "lib/w95/dd.hpp"
+#include "lib/view/video.hpp"
 #include "Lib/Sys/Reg.h"
 #include "Lib/Sys/RegInit.hpp"
 #include "Lib/View/Grab.hpp"

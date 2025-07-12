@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1996
+ * Copyright Â© DreamWorks Interactive. 1996
  *
  * Contents:
  *		CSynthesizer class for AI library.  CSynthesizer combines all sub-brain inputs into 
@@ -89,7 +89,7 @@
 #include "Influence.hpp"
 #include <map>
 
-#include "Lib\Std\Set.hpp"
+#include "Lib/Std/Set.hpp"
 
 
 class CBrain;

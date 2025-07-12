@@ -1,7 +1,7 @@
 /***********************************************************************************************
  *
  * $Source::																				   $
- * Copyright © DreamWorks Interactive. 1996
+ * Copyright Â© DreamWorks Interactive. 1996
  *
  * Contents:
  *		The AI main functions.
@@ -69,7 +69,7 @@
 #define HEADER_GAME_AI_AIMAIN_HPP
 
 #include <list>
-#include "Lib\Std\Random.hpp"
+#include "Lib/Std/Random.hpp"
 #include "Lib/EntityDBase/Subsystem.hpp"
 
 #include "Classes.hpp"

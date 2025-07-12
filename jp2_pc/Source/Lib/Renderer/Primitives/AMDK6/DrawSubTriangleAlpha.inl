@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive, 1997.
+ * Copyright Â© DreamWorks Interactive, 1997.
  *
  * Contents:
  *		Specialized version of the flat shaded alpha primitive
@@ -41,7 +41,7 @@
  * 
  ***********************************************************************************************/
 
-#include "lib\renderer\LightBlend.hpp"
+#include "lib/renderer/LightBlend.hpp"
 
 
 static uint32 u4AlphaColourMask;

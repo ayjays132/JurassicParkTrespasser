@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1996
+ * Copyright Â© DreamWorks Interactive. 1996
  *
  * Contents:
  ***********************************************************************************************
@@ -80,7 +80,7 @@
 
 #include "Lib/EntityDBase/Instance.hpp"
 #include "Lib/View/Colour.hpp"
-#include "Lib\Audio\SoundDefs.hpp"
+#include "Lib/Audio/SoundDefs.hpp"
 
 class CClut;
 

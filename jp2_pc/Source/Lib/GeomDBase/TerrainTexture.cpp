@@ -1,6 +1,6 @@
 /***********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1996
+ * Copyright Â© DreamWorks Interactive. 1996
  *
  * Contents:
  *		Implementation of TerrainTexture.hpp.
@@ -37,7 +37,7 @@
 #include "Lib/GeomDBase/TerrainObj.hpp"
 #include "Lib/GeomDBase/WaveletQuadTree.hpp"
 #include "Lib/Renderer/Texture.hpp"
-#include "Lib/Renderer/Pipeline.hpp"
+#include "Lib/Renderer/PipeLine.hpp"
 #include "Lib/Renderer/Camera.hpp"
 #include "Lib/Renderer/Light.hpp"
 #include "Lib/Renderer/Primitives/DrawTriangle.hpp"

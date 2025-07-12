@@ -1,6 +1,6 @@
 /**********************************************************************************************
  *
- * Copyright © DreamWorks Interactive. 1998
+ * Copyright Â© DreamWorks Interactive. 1998
  *
  *	Implementation of MoveActivities.hpp.
  *
@@ -142,7 +142,7 @@
 #include "Common.hpp"
 
 #include "MoveActivities.hpp"
-#include "Lib\Std\Random.hpp"
+#include "Lib/Std/Random.hpp"
 
 #include "Activity.hpp"
 #include "Synthesizer.hpp"
