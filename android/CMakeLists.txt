@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10) project(JPT_Android)
+cmake_minimum_required(VERSION 3.15) project(JPT_Android)
 
     option(
         ENABLE_OCULUS_QUEST_SUPPORT
