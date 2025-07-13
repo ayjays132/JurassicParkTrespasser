@@ -10,6 +10,8 @@ To build for Android enable the `ENABLE_OCULUS_QUEST_SUPPORT` option and use an 
 The optional modern environment renderer (`ENABLE_MODERN_ENV_RENDER`) now loads
 a cubemap using OpenGL and draws it each frame. Pass the cubemap folder and an
 optional intensity value to `VR::Initialize()` when starting the application.
+`VR::Initialize()` returns **false** if the cubemap or shaders fail to load,
+allowing callers to detect when the renderer is unavailable.
 If the required OpenGL
 development libraries are not present the build instead compiles a stub and the
 environment will not be rendered. The environment intensity and orientation can
