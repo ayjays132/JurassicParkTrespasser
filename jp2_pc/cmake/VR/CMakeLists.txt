@@ -4,13 +4,13 @@ list(APPEND VR_Inc
     ${CMAKE_SOURCE_DIR}/Source/Lib/VR/VR.hpp
 )
 
-list(APPEND VR_Src
-    ${CMAKE_SOURCE_DIR}/Source/Lib/VR/VR.cpp
-)
-
 if(ANDROID)
-    list(APPEND VR_Src
+    set(VR_Src
         ${CMAKE_SOURCE_DIR}/Source/Lib/VR/android/VR_Android.cpp
+    )
+else()
+    set(VR_Src
+        ${CMAKE_SOURCE_DIR}/Source/Lib/VR/VR.cpp
     )
 endif()
 
