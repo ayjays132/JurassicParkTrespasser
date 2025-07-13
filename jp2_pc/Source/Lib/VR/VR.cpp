@@ -25,9 +25,12 @@ bool Initialize(const char *envCubemapFolder, float envIntensity) {
   if (!ok)
     std::fprintf(stderr, "Failed to initialise environment renderer\n");
   Renderer::SetEnvironmentIntensity(envIntensity);
-#endif
-
+  return ok;
+#else
+  (void)envCubemapFolder;
+  (void)envIntensity;
   return true;
+#endif
 }
 
 void Shutdown() {

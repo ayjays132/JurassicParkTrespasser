@@ -17,6 +17,9 @@ namespace VR {
     // Optionally specify an initial cubemap folder and brightness when
     // initialising the VR system. The intensity parameter is passed directly
     // to the modern environment renderer when available.
+    // Returns true on success. When Quest support is enabled the value
+    // reflects whether the modern environment renderer initialised
+    // correctly.
     bool Initialize(const char *envCubemapFolder = nullptr,
                     float envIntensity = 1.0f);
     void Shutdown();
