@@ -75,12 +75,12 @@
 
 #include "BuildVer.hpp"
 
+#include "Lib/Std/UDefs.hpp"
+#include "Lib/Std/UAssert.hpp"
 #include "Lib/Std/Array.hpp"
 #include "Lib/Std/InitSys.hpp"
 #include "Lib/Std/Ptr.hpp"
 #include "Lib/Std/StdLibEx.hpp"
-#include "Lib/Std/UAssert.hpp"
-#include "Lib/Std/UDefs.hpp"
 #include "Lib/Std/UTypes.hpp"
 
 #endif

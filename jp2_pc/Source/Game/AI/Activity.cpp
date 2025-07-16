@@ -85,7 +85,7 @@
 #include "Lib/EntityDBase/Animal.hpp"
 
 #include "Lib/EntityDBase/MessageTypes/MsgAudio.hpp"
-#include "Lib/Audio/Sounddefs.hpp"
+#include "Lib/Audio/SoundDefs.hpp"
 #include "Lib/Audio/AudioLoader.hpp"
 
 #include "Lib/Loader/SaveFile.hpp"

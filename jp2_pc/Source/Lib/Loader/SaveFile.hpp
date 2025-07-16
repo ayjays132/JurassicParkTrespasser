@@ -1,6 +1,6 @@
 /**********************************************************************************************
  *
- * Copyright © DreamWorks Interactive, 1996
+ * Copyright Â© DreamWorks Interactive, 1996
  *
  * Contents:
  *		Save class for Trespasser CInstances (could be a CSaveable at some point).
@@ -80,7 +80,7 @@
 //
 
 #include "SaveBuffer.hpp"
-#include "Lib/GROFF/FileIO.hpp"
+#include "Lib/Groff/FileIO.hpp"
 #include "Lib/Sys/Timer.hpp"
 #include <set>
 
